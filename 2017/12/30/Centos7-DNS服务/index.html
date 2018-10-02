@@ -15,17 +15,23 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="DNS解析安装bind123yum -y install bind-chrootsystemctl restart namedsystemctl enable named 修改主配置文件">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.520jd.me/2018/10/01/hello-world/index.html">
+<meta property="og:title" content="Centos7  DNS服务">
+<meta property="og:url" content="http://blog.520jd.me/2017/12/30/Centos7-DNS服务/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="DNS解析安装bind123yum -y install bind-chrootsystemctl restart namedsystemctl enable named 修改主配置文件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T10:14:29.567Z">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201712/30161625_rHzZ.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201712/30161643_0NrL.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201712/30162133_5BGo.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201712/30162139_GXtI.png">
+<meta property="og:updated_time" content="2017-12-30T08:25:59.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Centos7  DNS服务">
+<meta name="twitter:description" content="DNS解析安装bind123yum -y install bind-chrootsystemctl restart namedsystemctl enable named 修改主配置文件">
+<meta name="twitter:image" content="https://static.oschina.net/uploads/img/201712/30161625_rHzZ.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +63,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | 个人博客|吴志盛</title>
+<title>Centos7  DNS服务 | 个人博客|吴志盛</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -276,11 +282,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Centos7-DNS服务" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/10/01/hello-world/" class="article-date">
-      <time datetime="2018-10-01T10:14:29.567Z" itemprop="datePublished">2018-10-01</time>
+      <a href="/2017/12/30/Centos7-DNS服务/" class="article-date">
+      <time datetime="2017-12-30T08:23:59.000Z" itemprop="datePublished">2017-12-30</time>
 </a>
 
 
@@ -295,7 +301,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Centos7  DNS服务
     </h1>
   
 
@@ -305,6 +311,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -312,15 +322,28 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="DNS解析"><a href="#DNS解析" class="headerlink" title="DNS解析"></a>DNS解析</h2><h4 id="安装bind"><a href="#安装bind" class="headerlink" title="安装bind"></a>安装bind</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y install bind-chroot</span><br><span class="line">systemctl restart named</span><br><span class="line">systemctl enable named</span><br></pre></td></tr></table></figure>
+<h4 id="修改主配置文件"><a href="#修改主配置文件" class="headerlink" title="修改主配置文件"></a>修改主配置文件</h4><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/named.conf</span><br><span class="line">options &#123;</span><br><span class="line">        listen-on port 53 &#123; any; &#125;;   #监听的端口的ip(ip可多个，any表示所有)</span><br><span class="line">        listen-on-v6 port 53 &#123; ::1; &#125;;</span><br><span class="line">        directory       &quot;/var/named&quot;;</span><br><span class="line">        dump-file       &quot;/var/named/data/cache_dump.db&quot;;</span><br><span class="line">        statistics-file &quot;/var/named/data/named_stats.txt&quot;;</span><br><span class="line">        memstatistics-file &quot;/var/named/data/named_mem_stats.txt&quot;;</span><br><span class="line">        allow-query     &#123; any; &#125;;   #允许dns查询的客户机列表any表示所有</span><br></pre></td></tr></table></figure>
+<h4 id="配置区域数据信息"><a href="#配置区域数据信息" class="headerlink" title="配置区域数据信息"></a>配置区域数据信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/named.rfc1912.zones</span><br><span class="line">zone &quot;linuxprobe.com&quot; IN &#123;  \\直接在末尾追加</span><br><span class="line">        type master;</span><br><span class="line">        file &quot;linuxprobe.com.zone&quot;;</span><br><span class="line">        allow-update &#123; none; &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="配置解析数据信息"><a href="#配置解析数据信息" class="headerlink" title="配置解析数据信息"></a>配置解析数据信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /var/named</span><br><span class="line">ls -al named.localhost</span><br><span class="line">cp -a named.localhost linuxprobe.com.zone</span><br><span class="line"></span><br><span class="line">vim linuxprobe.com.zone</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201712/30161625_rHzZ.png" alt="输入图片说明"></p>
+<ul>
+<li>systemctl  restart named</li>
+</ul>
+<h4 id="检查解析结果"><a href="#检查解析结果" class="headerlink" title="检查解析结果"></a>检查解析结果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br><span class="line">&gt;www.linuprobe.com</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201712/30161643_0NrL.png" alt="输入图片说明"></p>
+<blockquote>
+<p><strong>若解析不成功</strong><br>vim /etc/resolv.conf<br>nameserver 192.168.18.10</p>
+</blockquote>
+<h3 id="反向解析"><a href="#反向解析" class="headerlink" title="反向解析"></a>反向解析</h3><h4 id="配置区域数据信息-1"><a href="#配置区域数据信息-1" class="headerlink" title="配置区域数据信息"></a>配置区域数据信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/named.rfc1912.zones</span><br><span class="line">zone &quot;18.168.192.in-addr.arpa&quot; IN &#123;</span><br><span class="line">        type master;</span><br><span class="line">        file &quot;192.168.18.arpa&quot;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="配置解析数据信息-1"><a href="#配置解析数据信息-1" class="headerlink" title="配置解析数据信息"></a>配置解析数据信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp -a named.loopback 192.168.18.arpa</span><br><span class="line">vim 192.168.18.arpa</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201712/30162133_5BGo.png" alt="输入图片说明"></p>
+<ul>
+<li>systemctl restart named</li>
+</ul>
+<h4 id="检查解析结果-1"><a href="#检查解析结果-1" class="headerlink" title="检查解析结果"></a>检查解析结果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br><span class="line">192.168.18.10</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201712/30162139_GXtI.png" alt="输入图片说明"></p>
 
       
     </div>
@@ -329,13 +352,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/10/01/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2017/12/30/Centos7-DNS服务/">Centos7  DNS服务</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
-        <p><span>发布时间:</span>2018-10-01, 18:14:29</p>
-        <p><span>最后更新:</span>2018-10-01, 18:14:29</p>
+        <p><span>发布时间:</span>2017-12-30, 16:23:59</p>
+        <p><span>最后更新:</span>2017-12-30, 16:25:59</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/10/01/hello-world/" title="Hello World">http://blog.520jd.me/2018/10/01/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/01/hello-world/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/30/Centos7-DNS服务/" title="Centos7  DNS服务">http://blog.520jd.me/2017/12/30/Centos7-DNS服务/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2017/12/30/Centos7-DNS服务/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -347,10 +370,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/12/30/DNS主从服务/">
+                    DNS主从服务
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/16/pssh批量处理/">
-                    pssh批量处理
+                <a href="/2017/12/30/用iso镜像配置本地yum源/">
+                    用iso镜像配置本地yum源
                 </a>
             </div>
         
@@ -362,7 +391,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DNS解析"><span class="toc-number">1.</span> <span class="toc-text">DNS解析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装bind"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装bind</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修改主配置文件"><span class="toc-number">1.0.2.</span> <span class="toc-text">修改主配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置区域数据信息"><span class="toc-number">1.0.3.</span> <span class="toc-text">配置区域数据信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置解析数据信息"><span class="toc-number">1.0.4.</span> <span class="toc-text">配置解析数据信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#检查解析结果"><span class="toc-number">1.0.5.</span> <span class="toc-text">检查解析结果</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反向解析"><span class="toc-number">1.1.</span> <span class="toc-text">反向解析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置区域数据信息-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">配置区域数据信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置解析数据信息-1"><span class="toc-number">1.1.2.</span> <span class="toc-text">配置解析数据信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#检查解析结果-1"><span class="toc-number">1.1.3.</span> <span class="toc-text">检查解析结果</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -398,7 +427,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Centos7  DNS服务　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -420,13 +449,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/12/30/DNS主从服务/" title="上一篇: DNS主从服务">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/09/16/pssh批量处理/" title="下一篇: pssh批量处理">
+            <a href="/2017/12/30/用iso镜像配置本地yum源/" title="下一篇: 用iso镜像配置本地yum源">
                 <i class="fa fa-angle-right"></i>
             </a>
         

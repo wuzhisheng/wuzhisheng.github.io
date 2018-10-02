@@ -15,17 +15,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Docker 三大组件 仓库：存放各种各样已经打包好的Docker应用镜像：按照Docker的规则制作的应用。（像Windows 安装软件包） 容器：；利用镜像创建容器：启动预先定义好的进程与用户交互，对提    供服务。一个镜像可以创建多个名字不同的容器  基础命令">
+<meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.520jd.me/2018/10/01/hello-world/index.html">
+<meta property="og:title" content="Docker常用操作命令">
+<meta property="og:url" content="http://blog.520jd.me/2017/12/30/Docker常用操作命令/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Docker 三大组件 仓库：存放各种各样已经打包好的Docker应用镜像：按照Docker的规则制作的应用。（像Windows 安装软件包） 容器：；利用镜像创建容器：启动预先定义好的进程与用户交互，对提    供服务。一个镜像可以创建多个名字不同的容器  基础命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T10:14:29.567Z">
+<meta property="og:updated_time" content="2017-12-30T07:50:01.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Docker常用操作命令">
+<meta name="twitter:description" content="Docker 三大组件 仓库：存放各种各样已经打包好的Docker应用镜像：按照Docker的规则制作的应用。（像Windows 安装软件包） 容器：；利用镜像创建容器：启动预先定义好的进程与用户交互，对提    供服务。一个镜像可以创建多个名字不同的容器  基础命令">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | 个人博客|吴志盛</title>
+<title>Docker常用操作命令 | 个人博客|吴志盛</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -276,11 +277,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Docker常用操作命令" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/10/01/hello-world/" class="article-date">
-      <time datetime="2018-10-01T10:14:29.567Z" itemprop="datePublished">2018-10-01</time>
+      <a href="/2017/12/30/Docker常用操作命令/" class="article-date">
+      <time datetime="2017-12-30T07:46:51.000Z" itemprop="datePublished">2017-12-30</time>
 </a>
 
 
@@ -295,7 +296,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Docker常用操作命令
     </h1>
   
 
@@ -305,6 +306,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -312,15 +317,67 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="Docker-三大组件"><a href="#Docker-三大组件" class="headerlink" title="Docker 三大组件"></a>Docker 三大组件</h2><blockquote>
+<p><strong>仓库</strong>：存放各种各样已经打包好的Docker应用<br><strong>镜像</strong>：按照Docker的规则制作的应用。（像Windows 安装软件包）<br> <strong>容器</strong>：；利用镜像创建容器：启动预先定义好的进程与用户交互，对提    供服务。一个镜像可以创建多个名字不同的容器</p>
+</blockquote>
+<h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><a id="more"></a>
+<h4 id="启动-查询"><a href="#启动-查询" class="headerlink" title="启动 查询"></a>启动 查询</h4><blockquote>
+<p><strong>容器启动</strong>：docker run –it/-d –p/P –name imageID/name</p>
+</blockquote>
+<blockquote>
+<p><strong>容器启动/重启/停止</strong>:  docker start/restart/stop   容器id</p>
+</blockquote>
+<blockquote>
+<p><strong>容器进入</strong>：docker attach containerID  这个进入退出的话，容器会停掉<br>                    docker exec –it containerID /bin/bash</p>
+</blockquote>
+<blockquote>
+<p><strong>容器查询</strong>：docker inspect containerID<br>                        docker top containerID<br>                        docker diff containerID</p>
+</blockquote>
+<h4 id="列出本地镜像"><a href="#列出本地镜像" class="headerlink" title="列出本地镜像"></a>列出本地镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<ul>
+<li>-q 只显示镜像ID</li>
+</ul>
+<h4 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm</span><br></pre></td></tr></table></figure>
+<ul>
+<li>-f :通过SIGKILL信号强制删除一个运行中的容器</li>
+<li>-v :-v 删除与容器关联的卷</li>
+</ul>
+<h4 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi</span><br></pre></td></tr></table></figure>
+<ul>
+<li>-f 强制删除</li>
+</ul>
+<h4 id="更新镜像"><a href="#更新镜像" class="headerlink" title="更新镜像"></a>更新镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker pull hub.c.163.com/library/mysql:latest</span><br><span class="line"></span><br><span class="line">docker pull hub.c.163.com/library/wordpress:latest</span><br></pre></td></tr></table></figure>
+<ul>
+<li>latest 标记最新版本<br>-</li>
+</ul>
+<h4 id="创建并运行容器"><a href="#创建并运行容器" class="headerlink" title="创建并运行容器"></a>创建并运行容器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Docker run</span><br><span class="line"></span><br><span class="line">docker run -name db --env MYSQL_ROOT_PASSWORD=example -d mariadb</span><br><span class="line"></span><br><span class="line">docker run -name MyWordPress --link db:mysql -p 8080:80 -d wordpress</span><br></pre></td></tr></table></figure>
+<ul>
+<li>以上wordpress由apache 和 mariadb 组成</li>
+<li>多容器是由link进行连接由数据。条件 –link db:mysql必须必wordpress先创建并运行 </li>
+<li>删除或停止也需要按顺序  先 wordpress 在 mysql</li>
+</ul>
+<blockquote>
+<p>-name  指定容器名字<br>-e 指定环境变量，容器中可以使用该环境变量<br>-d   指定容器运行于前台还是后台<br>-p 指定容器暴露的端口<br>–link 指定容器间的关联<br>-i 打开STDIN，用于控制台交互<br>-t 分配tty设备，该可以支持终端登录</p>
+</blockquote>
+<h4 id="查找镜像-版本"><a href="#查找镜像-版本" class="headerlink" title="查找镜像 版本"></a>查找镜像 版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker search +镜像名字</span><br><span class="line"></span><br><span class="line">docker version</span><br></pre></td></tr></table></figure>
+<h4 id="获取容器-镜像的基本信息"><a href="#获取容器-镜像的基本信息" class="headerlink" title="获取容器/镜像的基本信息"></a>获取容器/镜像的基本信息</h4><ul>
+<li>基本信息：存储位置，配置参数，网络设置等<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect  + 容器名</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>-f :指定返回值的模板文件。<br> -s :显示总的文件大小。</p>
+</blockquote>
+<h4 id="运行的容器中执行命令"><a href="#运行的容器中执行命令" class="headerlink" title="运行的容器中执行命令"></a>运行的容器中执行命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it 容器名   /bin/bash</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# docker exec -it mysql_wordpress /bin/bash</span><br><span class="line">root@58351ba956ab:/# pwd</span><br><span class="line">/</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>-d :分离模式: 在后台运行<br>-i :即使没有附加也保持STDIN 打开<br>-t :分配一个伪终端</p>
+</blockquote>
+<h4 id="从容器创建一个新的镜像"><a href="#从容器创建一个新的镜像" class="headerlink" title="从容器创建一个新的镜像"></a>从容器创建一个新的镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>-a :提交的镜像作者；<br>-c :使用Dockerfile指令来创建镜像；<br>-m :提交时的说明文字；<br>-p :在commit时，将容器暂停。</p>
+</blockquote>
+<h4 id="容器编排工具"><a href="#容器编排工具" class="headerlink" title="容器编排工具"></a>容器编排工具</h4><ul>
+<li>把同一个服务多个容器依次创建和启动<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Docker-compose</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">安装方式</span><br><span class="line">curl -L https://github.com/docker/compose/release/download/1.6.0/docker-compose-&apos;uname -s&apos;-&apos;uanme -m&apos;&gt;/usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line">创建</span><br><span class="line">mkdir  ~/wordpress</span><br><span class="line">vim docker-compose.yml  默认文件名</span><br><span class="line">wordpress:</span><br><span class="line">    image: wordpress</span><br><span class="line">    link:</span><br><span class="line">    - db:mysql</span><br><span class="line">    ports:</span><br><span class="line">    - 8080:80</span><br><span class="line">db:</span><br><span class="line">    image: mariadb</span><br><span class="line">    environment:</span><br><span class="line">        MYSQL_ROOT_PASSWORD： example</span><br><span class="line"></span><br><span class="line">执行</span><br><span class="line">cd ~/wordpress &amp;&amp;docker-compose up </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">docker-compose start</span><br><span class="line">docker-compose stop</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -329,13 +386,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/10/01/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2017/12/30/Docker常用操作命令/">Docker常用操作命令</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
-        <p><span>发布时间:</span>2018-10-01, 18:14:29</p>
-        <p><span>最后更新:</span>2018-10-01, 18:14:29</p>
+        <p><span>发布时间:</span>2017-12-30, 15:46:51</p>
+        <p><span>最后更新:</span>2017-12-30, 15:50:01</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/10/01/hello-world/" title="Hello World">http://blog.520jd.me/2018/10/01/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/01/hello-world/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/30/Docker常用操作命令/" title="Docker常用操作命令">http://blog.520jd.me/2017/12/30/Docker常用操作命令/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2017/12/30/Docker常用操作命令/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -347,10 +404,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/12/30/用iso镜像配置本地yum源/">
+                    用iso镜像配置本地yum源
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/16/pssh批量处理/">
-                    pssh批量处理
+                <a href="/2017/12/29/Shell/">
+                    Shell
                 </a>
             </div>
         
@@ -362,7 +425,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-三大组件"><span class="toc-number">1.</span> <span class="toc-text">Docker 三大组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础命令"><span class="toc-number">2.</span> <span class="toc-text">基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#启动-查询"><span class="toc-number">2.0.1.</span> <span class="toc-text">启动 查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#列出本地镜像"><span class="toc-number">2.0.2.</span> <span class="toc-text">列出本地镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除容器"><span class="toc-number">2.0.3.</span> <span class="toc-text">删除容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除镜像"><span class="toc-number">2.0.4.</span> <span class="toc-text">删除镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更新镜像"><span class="toc-number">2.0.5.</span> <span class="toc-text">更新镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建并运行容器"><span class="toc-number">2.0.6.</span> <span class="toc-text">创建并运行容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查找镜像-版本"><span class="toc-number">2.0.7.</span> <span class="toc-text">查找镜像 版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#获取容器-镜像的基本信息"><span class="toc-number">2.0.8.</span> <span class="toc-text">获取容器/镜像的基本信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行的容器中执行命令"><span class="toc-number">2.0.9.</span> <span class="toc-text">运行的容器中执行命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#从容器创建一个新的镜像"><span class="toc-number">2.0.10.</span> <span class="toc-text">从容器创建一个新的镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#容器编排工具"><span class="toc-number">2.0.11.</span> <span class="toc-text">容器编排工具</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -398,7 +461,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Docker常用操作命令　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -420,13 +483,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/12/30/用iso镜像配置本地yum源/" title="上一篇: 用iso镜像配置本地yum源">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/09/16/pssh批量处理/" title="下一篇: pssh批量处理">
+            <a href="/2017/12/29/Shell/" title="下一篇: Shell">
                 <i class="fa fa-angle-right"></i>
             </a>
         

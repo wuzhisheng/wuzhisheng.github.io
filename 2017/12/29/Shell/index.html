@@ -15,17 +15,24 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
+<meta name="keywords" content="shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.520jd.me/2018/10/01/hello-world/index.html">
+<meta property="og:title" content="Shell">
+<meta property="og:url" content="http://blog.520jd.me/2017/12/29/Shell/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T10:14:29.567Z">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1510727980770.png">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/2.png">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
+<meta property="og:updated_time" content="2017-12-29T15:22:10.371Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Shell">
+<meta name="twitter:description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
+<meta name="twitter:image" content="http://blog.520jd.me/2017/12/29/Shell/1510727980770.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +64,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | 个人博客|吴志盛</title>
+<title>Shell | 个人博客|吴志盛</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -276,11 +283,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Shell" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/10/01/hello-world/" class="article-date">
-      <time datetime="2018-10-01T10:14:29.567Z" itemprop="datePublished">2018-10-01</time>
+      <a href="/2017/12/29/Shell/" class="article-date">
+      <time datetime="2017-12-29T15:17:22.000Z" itemprop="datePublished">2017-12-29</time>
 </a>
 
 
@@ -295,7 +302,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Shell
     </h1>
   
 
@@ -305,6 +312,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -312,15 +323,22 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h1><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><h3 id="echo-e-转义序列的字符串"><a href="#echo-e-转义序列的字符串" class="headerlink" title="echo -e  +  转义序列的字符串"></a>echo -e  +  转义序列的字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">echo -e &quot;1\t2\t3&quot;</span><br><span class="line">1 2 3</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo -e &quot;\e[31m This is red text&quot;   字体设置为红色</span><br><span class="line"></span><br><span class="line">echo -e &quot;\e[1;42m Green Background &quot;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<blockquote>
+<p><strong>字体</strong><br>重置=0，黑色=30，红色=31，绿色=32，黄色=33，蓝<br>色=34，洋红=35，青色=36，白色=37。<br><strong>背景颜色</strong><br>重置=0，黑色=40，红色=41，绿色=42，黄色=43，<br>蓝色=44，洋红=45，青色=46，白色=47</p>
+</blockquote>
+<h3 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# len=123456789</span><br><span class="line">[root@localhost ~]# echo $len</span><br><span class="line">123456789</span><br><span class="line">[root@localhost ~]# echo $&#123;len&#125;</span><br><span class="line">123456789</span><br><span class="line"></span><br><span class="line">显示当前环境变量</span><br><span class="line">[root@localhost ~]# echo $SHELL </span><br><span class="line">/bin/bash</span><br><span class="line">[root@localhost ~]# echo $0</span><br><span class="line">-bash</span><br><span class="line"></span><br><span class="line">计算长度</span><br><span class="line">[root@localhost ~]# len=123456789</span><br><span class="line">[root@localhost ~]# echo $&#123;#len&#125;</span><br><span class="line">9</span><br><span class="line"></span><br><span class="line">检查是否为超级用户</span><br><span class="line">[root@localhost ~]# echo $UID</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# let wu=4+2</span><br><span class="line">6</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# let wu+=6</span><br><span class="line">[root@localhost ~]# echo $wu</span><br><span class="line">12</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# let wu++</span><br><span class="line">[root@localhost ~]# echo $wu</span><br><span class="line">13</span><br><span class="line"></span><br><span class="line">13</span><br><span class="line">[root@localhost ~]# zhi=$[7+5]</span><br><span class="line">[root@localhost ~]# echo $zhi</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+<h4 id="bc"><a href="#bc" class="headerlink" title="bc"></a>bc</h4><p><strong>执行浮点数运算并应用一些高级函数</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# echo &quot;4 * 0.56&quot; | bc</span><br><span class="line">2.24</span><br><span class="line"></span><br><span class="line">scale=2将小数位个数设置为2</span><br><span class="line">[root@localhost ~]# echo &quot;scale=2;3/8&quot;|bc</span><br><span class="line">0.37</span><br><span class="line"></span><br><span class="line">obase=2 转化为二进制</span><br><span class="line">[root@localhost ~]# echo &quot;obase=2;100&quot;|bc</span><br><span class="line">1100100</span><br><span class="line"></span><br><span class="line">平方根</span><br><span class="line">[root@localhost ~]# echo &quot;sqrt(100)&quot; | bc </span><br><span class="line">10</span><br><span class="line"></span><br><span class="line">平方</span><br><span class="line">[root@localhost ~]# echo &quot;5^2&quot; | bc           </span><br><span class="line">25</span><br></pre></td></tr></table></figure></p>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# array=(1 2 3 4 5 6)</span><br><span class="line">[root@localhost ~]# echo $&#123;#array[*]&#125;</span><br><span class="line">6</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo $&#123;array[0]&#125;</span><br><span class="line">1</span><br><span class="line">[root@localhost ~]# echo $&#123;array[1]&#125;</span><br><span class="line">2</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo $&#123;array[0]&#125;</span><br><span class="line">wu</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# sz=([name]=&apos;wu&apos; [age]=18)</span><br><span class="line">[root@localhost ~]# echo $&#123;sz=[age]&#125;</span><br><span class="line">18</span><br></pre></td></tr></table></figure>
+<h4 id="设置时间"><a href="#设置时间" class="headerlink" title="设置时间"></a>设置时间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# date</span><br><span class="line">Wed Nov 15 01:33:40 EST 2017</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# date &quot;+%Y %b %d %H %M %S&quot;</span><br><span class="line">2017 Nov 15 14 40 36</span><br><span class="line"></span><br><span class="line">修改时间</span><br><span class="line">[root@localhost ~]# date -s &quot;21 June 2008 11:01:22&quot;</span><br><span class="line">Sat Jun 21 11:01:22 EDT 2008 </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# date -s &quot;15 November 2017 14:35:22&quot;</span><br><span class="line">Wed Nov 15 14:35:22 EST 2017</span><br></pre></td></tr></table></figure>
+<p><img src="./1510727980770.png" alt="Alt text"></p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><img src="./1.png" alt="Alt text"><br><img src="./2.png" alt="Alt text"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost dir]# cat file </span><br><span class="line">#!/bin/bash</span><br><span class="line">x=0</span><br><span class="line">until [ $x -eq 9 ];</span><br><span class="line">do</span><br><span class="line">let x++;echo $x;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
+<h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><p><img src="./1.png" alt="Alt text"><br><img src="./1.png" alt="Alt text"></p>
+<blockquote>
+<p>&amp;&amp; 和   || 或</p>
+</blockquote>
 
       
     </div>
@@ -329,13 +347,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/10/01/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2017/12/29/Shell/">Shell</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
-        <p><span>发布时间:</span>2018-10-01, 18:14:29</p>
-        <p><span>最后更新:</span>2018-10-01, 18:14:29</p>
+        <p><span>发布时间:</span>2017-12-29, 23:17:22</p>
+        <p><span>最后更新:</span>2017-12-29, 23:22:10</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/10/01/hello-world/" title="Hello World">http://blog.520jd.me/2018/10/01/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/01/hello-world/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/29/Shell/" title="Shell">http://blog.520jd.me/2017/12/29/Shell/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2017/12/29/Shell/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -347,10 +365,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/12/30/Docker常用操作命令/">
+                    Docker常用操作命令
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/16/pssh批量处理/">
-                    pssh批量处理
+                <a href="/2017/12/28/windows平台安装MongoDB/">
+                    windows平台安装MongoDB
                 </a>
             </div>
         
@@ -362,7 +386,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shell"><span class="toc-number">1.</span> <span class="toc-text">shell</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#echo-e-转义序列的字符串"><span class="toc-number">1.1.1.</span> <span class="toc-text">echo -e  +  转义序列的字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常识"><span class="toc-number">1.1.2.</span> <span class="toc-text">常识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算"><span class="toc-number">1.1.3.</span> <span class="toc-text">运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#let"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">let</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bc"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">bc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置时间"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">设置时间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">1.1.4.</span> <span class="toc-text">循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if"><span class="toc-number">1.1.5.</span> <span class="toc-text">if</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -398,7 +422,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Shell　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -420,13 +444,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/12/30/Docker常用操作命令/" title="上一篇: Docker常用操作命令">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/09/16/pssh批量处理/" title="下一篇: pssh批量处理">
+            <a href="/2017/12/28/windows平台安装MongoDB/" title="下一篇: windows平台安装MongoDB">
                 <i class="fa fa-angle-right"></i>
             </a>
         

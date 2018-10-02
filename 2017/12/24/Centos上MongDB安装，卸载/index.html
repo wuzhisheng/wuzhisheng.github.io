@@ -15,17 +15,20 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Mongdb安装一.配置yum源 在路径/etc/yum.repos.d/下创建文件mongodb.repo">
+<meta name="keywords" content="mongodb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.520jd.me/2018/10/01/hello-world/index.html">
+<meta property="og:title" content="Centos上MongDB安装，卸载">
+<meta property="og:url" content="http://blog.520jd.me/2017/12/24/Centos上MongDB安装，卸载/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Mongdb安装一.配置yum源 在路径/etc/yum.repos.d/下创建文件mongodb.repo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T10:14:29.567Z">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201711/02094936_xw9k.png">
+<meta property="og:updated_time" content="2017-12-29T15:04:29.515Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Centos上MongDB安装，卸载">
+<meta name="twitter:description" content="Mongdb安装一.配置yum源 在路径/etc/yum.repos.d/下创建文件mongodb.repo">
+<meta name="twitter:image" content="https://static.oschina.net/uploads/img/201711/02094936_xw9k.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +60,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | 个人博客|吴志盛</title>
+<title>Centos上MongDB安装，卸载 | 个人博客|吴志盛</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -276,11 +279,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Centos上MongDB安装，卸载" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/10/01/hello-world/" class="article-date">
-      <time datetime="2018-10-01T10:14:29.567Z" itemprop="datePublished">2018-10-01</time>
+      <a href="/2017/12/24/Centos上MongDB安装，卸载/" class="article-date">
+      <time datetime="2017-12-23T17:17:17.000Z" itemprop="datePublished">2017-12-24</time>
 </a>
 
 
@@ -295,7 +298,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Centos上MongDB安装，卸载
     </h1>
   
 
@@ -305,6 +308,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongodb/">mongodb</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -312,15 +319,28 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="Mongdb安装"><a href="#Mongdb安装" class="headerlink" title="Mongdb安装"></a>Mongdb安装</h1><h2 id="一-配置yum源"><a href="#一-配置yum源" class="headerlink" title="一.配置yum源"></a>一.配置yum源</h2><ol>
+<li><p>在路径/etc/yum.repos.d/下创建文件mongodb.repo </p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> cd /etc/yum.repos.d/  </span><br><span class="line">touch mongodb.repo</span><br></pre></td></tr></table></figure>
+<p>2.在文件mongodb-org-3.4.repo中写入如下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[mongodb]</span><br><span class="line">name=MongoDB Repository</span><br><span class="line">baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/ &lt;br/&gt;</span><br><span class="line">gpgcheck=1 </span><br><span class="line">enable=1</span><br><span class="line">gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>记得联网</p>
+</blockquote>
+<h2 id="二-安装mongodb"><a href="#二-安装mongodb" class="headerlink" title="二.安装mongodb"></a>二.安装mongodb</h2><pre><code>yum install -y mongodb-org
+</code></pre><h2 id="三-开启mongodb服务"><a href="#三-开启mongodb服务" class="headerlink" title="三.开启mongodb服务"></a>三.开启mongodb服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl  start mongodb</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- chkconfig mongod on  设置开机启动</span><br><span class="line">- systemctl stop mongodb  停止mongodb服务</span><br><span class="line">-  systemctl restart mongodb  重启mongodb服务</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>输入mongo  有出现交互界面  则成功</p>
+</blockquote>
+<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><h2 id="1-停止服务"><a href="#1-停止服务" class="headerlink" title="1.停止服务"></a>1.停止服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mongodb</span><br></pre></td></tr></table></figure>
+<h2 id="2-删除安装的包"><a href="#2-删除安装的包" class="headerlink" title="2. 删除安装的包"></a>2. 删除安装的包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　yum erase $(rpm -qa | grep mongodb-org)</span><br></pre></td></tr></table></figure>
+<h2 id="3-删除数据及日志"><a href="#3-删除数据及日志" class="headerlink" title="3.删除数据及日志"></a>3.删除数据及日志</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -r /var/log/mongodb</span><br><span class="line">rm -r /var/lib/mongo</span><br></pre></td></tr></table></figure>
+<h1 id="SecureCRT-进入mongos-命令下，输错命令无法delete或backspace的解决办法"><a href="#SecureCRT-进入mongos-命令下，输错命令无法delete或backspace的解决办法" class="headerlink" title="SecureCRT 进入mongos 命令下，输错命令无法delete或backspace的解决办法"></a>SecureCRT 进入mongos 命令下，输错命令无法delete或backspace的解决办法</h1><p>选择options—&gt;Session Options –&gt;Terminal–&gt;Emulation;<br>在右侧面板中选择Terminal类型，不要选择VT100，选其他的就行了，我选的Linux。</p>
+<p><img src="https://static.oschina.net/uploads/img/201711/02094936_xw9k.png" alt="输入图片说明"></p>
 
       
     </div>
@@ -329,13 +349,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/10/01/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2017/12/24/Centos上MongDB安装，卸载/">Centos上MongDB安装，卸载</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
-        <p><span>发布时间:</span>2018-10-01, 18:14:29</p>
-        <p><span>最后更新:</span>2018-10-01, 18:14:29</p>
+        <p><span>发布时间:</span>2017-12-24, 01:17:17</p>
+        <p><span>最后更新:</span>2017-12-29, 23:04:29</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/10/01/hello-world/" title="Hello World">http://blog.520jd.me/2018/10/01/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/01/hello-world/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/24/Centos上MongDB安装，卸载/" title="Centos上MongDB安装，卸载">http://blog.520jd.me/2017/12/24/Centos上MongDB安装，卸载/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2017/12/24/Centos上MongDB安装，卸载/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -347,12 +367,12 @@
 
     <nav id="article-nav">
         
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/16/pssh批量处理/">
-                    pssh批量处理
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/12/28/windows平台安装MongoDB/">
+                    windows平台安装MongoDB
                 </a>
             </div>
+        
         
     </nav>
 
@@ -362,7 +382,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mongdb安装"><span class="toc-number">1.</span> <span class="toc-text">Mongdb安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-配置yum源"><span class="toc-number">1.1.</span> <span class="toc-text">一.配置yum源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-安装mongodb"><span class="toc-number">1.2.</span> <span class="toc-text">二.安装mongodb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-开启mongodb服务"><span class="toc-number">1.3.</span> <span class="toc-text">三.开启mongodb服务</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#卸载"><span class="toc-number">2.</span> <span class="toc-text">卸载</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-停止服务"><span class="toc-number">2.1.</span> <span class="toc-text">1.停止服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-删除安装的包"><span class="toc-number">2.2.</span> <span class="toc-text">2. 删除安装的包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-删除数据及日志"><span class="toc-number">2.3.</span> <span class="toc-text">3.删除数据及日志</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SecureCRT-进入mongos-命令下，输错命令无法delete或backspace的解决办法"><span class="toc-number">3.</span> <span class="toc-text">SecureCRT 进入mongos 命令下，输错命令无法delete或backspace的解决办法</span></a></li></ol>
         
     </div>
     <style>
@@ -398,7 +418,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Centos上MongDB安装，卸载　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -420,15 +440,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/12/28/windows平台安装MongoDB/" title="上一篇: windows平台安装MongoDB">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/09/16/pssh批量处理/" title="下一篇: pssh批量处理">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 

@@ -198,7 +198,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">-Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">zabbix</a></li></ul>
                     </div>
                 </section>
                 
@@ -416,6 +416,561 @@
 
 
   
+    <article id="post-松松入门MySQL" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/05/01/松松入门MySQL/" class="article-date">
+      <time datetime="2018-05-01T11:53:02.000Z" itemprop="datePublished">2018-05-01</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/01/松松入门MySQL/">松松入门MySQL</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="centos6安装"><a href="#centos6安装" class="headerlink" title="centos6安装"></a>centos6安装</h3><blockquote>
+<p><strong>注意大小写</strong><br>yum -y install MariaDB-Galera-server MariaDB-client galera  </p>
+</blockquote>
+<blockquote>
+<p><strong>开启mysql</strong><br>service mysql start</p>
+</blockquote>
+<blockquote>
+<p><strong>进行初始化安装设置</strong><br>mysql_secure_installation<br>设置密码（其他一路回车）</p>
+</blockquote>
+<blockquote>
+<p><strong>进入mysql</strong><br>mysql –uroot –p密码;</p>
+</blockquote>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/05/01/松松入门MySQL/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-各种姿势安装MongoDB" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/05/01/各种姿势安装MongoDB/" class="article-date">
+      <time datetime="2018-05-01T04:45:16.000Z" itemprop="datePublished">2018-05-01</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/01/各种姿势安装MongoDB/">各种姿势安装MongoDB</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h2><h3 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h3><blockquote>
+<p><strong>配置yum源</strong><br>vim /etc/yum.repos.d/mongodb.repo<br>[mongodb]<br>name=mongodb<br>baseurl=<a href="http://downloads-distro.mongodb.org/repo/redhat/os/x86_64" target="_blank" rel="noopener">http://downloads-distro.mongodb.org/repo/redhat/os/x86_64</a><br>enabled=1<br>gpgcheck=0</p>
+</blockquote>
+<blockquote>
+<p><strong>安装MongoDB</strong><br>yum –y isntall mongodb-org </p>
+</blockquote>
+<blockquote>
+<p><strong>开启mongodb服务</strong><br>service  mognod  start</p>
+</blockquote>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MongoDB/">MongoDB</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/05/01/各种姿势安装MongoDB/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-分分钟进阶MongoDB" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/04/29/分分钟进阶MongoDB/" class="article-date">
+      <time datetime="2018-04-29T11:11:51.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/分分钟进阶MongoDB/">分分钟进阶MongoDB</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p><img src="https://static.oschina.net/uploads/img/201805/01103228_CSBK.png" alt="输入图片说明"></p>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">use mydb   //创建数据库，有则切换该数据库</span><br><span class="line">db.dropDatabase()  //删除数据库</span><br><span class="line">db    //显示当前位置</span><br><span class="line">show dbs  //查看数据库列表</span><br><span class="line"># mongo wu  //直接登录mongo并进入wu数据库</span><br><span class="line"></span><br><span class="line">db.stats  //显示当前数据库状态</span><br><span class="line">db.version()  //当前db版本</span><br><span class="line">db.getMongo()  //当前db的链接机器地址</span><br><span class="line">db.getPrevError() //查询之前的错误信息</span><br><span class="line">db.resetError() //清除错误记录</span><br></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MongoDB/">MongoDB</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/04/29/分分钟进阶MongoDB/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-手把手教你安装varhlinux" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/02/18/手把手教你安装varhlinux/" class="article-date">
+      <time datetime="2018-02-18T11:35:20.000Z" itemprop="datePublished">2018-02-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/18/手把手教你安装varhlinux/">手把手教你安装Archlinux</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="Archlinux概述"><a href="#Archlinux概述" class="headerlink" title="Archlinux概述"></a>Archlinux概述</h2><blockquote>
+<p>Arch Linux是致力于使用简单、系统轻量、软件更新速度快的Linux发行版</p>
+<p><strong>优势</strong><br>Arch Wiki 非常丰富，就是我们遇到问题时解决的利器</p>
+<ul>
+<li>Arch 采用滚动更新的方式，因此你不用再考虑以后升级系统需要重装的问题</li>
+<li>Arch 的 pacman 是非常简单高效的包管理工具</li>
+<li>Arch 的 AUR 仓库包含大量软件包，只需一个 makepkg 命令即可构建，非常方</li>
+</ul>
+</blockquote>
+<h2 id="下载Archliunx-iso"><a href="#下载Archliunx-iso" class="headerlink" title="下载Archliunx iso"></a>下载Archliunx iso</h2><blockquote>
+<p><a href="https://www.archlinux.org/download/" target="_blank" rel="noopener">Archlinux iso 链接</a><br>在该页面，找到China区域，下载</p>
+</blockquote>
+<p><img src="https://static.oschina.net/uploads/img/201805/01104046_A16s.png" alt="输入图片说明" title="在这里输入图片标题"><br><img src="https://static.oschina.net/uploads/img/201805/01104050_YlfG.png" alt="输入图片说明" title="在这里输入图片标题"><br><img src="https://static.oschina.net/uploads/img/201805/01104059_UQk5.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/02/18/手把手教你安装varhlinux/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-zabbix3-0安装" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/01/19/zabbix3-0安装/" class="article-date">
+      <time datetime="2018-01-19T06:07:17.000Z" itemprop="datePublished">2018-01-19</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/19/zabbix3-0安装/">zabbix3.0安装</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="本实验软件版本"><a href="#本实验软件版本" class="headerlink" title="本实验软件版本:"></a>本实验软件版本:</h3><pre><code>* Cenos6.8，Nginx:1.9.15 , MySQL:5.5.49 , PHP:5.5.35，zabbix3.0.12
+</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>搭建Zabbix前提需要有LAMP/LNMP环境，本文也将列出其详细安装步骤<br>开始搭建之前，将Nginx:1.9.15 , MySQL:5.5.49 , PHP:5.5.35，zabbix3.0.12几个软件包下载下来，并放到系统中</p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zabbix/">zabbix</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/01/19/zabbix3-0安装/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-LVS-nat群集" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/01/02/LVS-nat群集/" class="article-date">
+      <time datetime="2018-01-02T06:52:28.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/02/LVS-nat群集/">LVS+nat群集</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>##环境<br><img src="https://static.oschina.net/uploads/img/201805/01110050_fQeV.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<blockquote>
+<p>如图所示<br>lvs-server：两块网卡（nat和VM1）<br>web1和web2（网卡VM1 要配置网关 192.168.1.1）<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">-Linux</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/01/02/LVS-nat群集/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-python一行命令搭建ftp" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/30/python一行命令搭建ftp/" class="article-date">
+      <time datetime="2017-12-30T14:26:21.000Z" itemprop="datePublished">2017-12-30</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/30/python一行命令搭建ftp/">python一行命令搭建ftp</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="环境：python2-7"><a href="#环境：python2-7" class="headerlink" title="环境：python2.7"></a>环境：python2.7</h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyftpdlib</span><br></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2017/12/30/python一行命令搭建ftp/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-windows安装python" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/30/windows安装python/" class="article-date">
+      <time datetime="2017-12-30T13:42:53.000Z" itemprop="datePublished">2017-12-30</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/30/windows安装python/">windows安装python</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="下载python"><a href="#下载python" class="headerlink" title="下载python"></a>下载python</h2><blockquote>
+<p><a href="http://www.python.org" target="_blank" rel="noopener">www.python.org</a> –&gt; Downloads–&gt;Windons 64位<br>下载后直接安装</p>
+</blockquote>
+<ul>
+<li><strong>注意</strong>：在Customize Python2.7.11(64-bit)<br><img src="https://static.oschina.net/uploads/img/201805/01112958_6Od0.png" alt="输入图片说明" title="在这里输入图片标题"><br><strong>其他直接next</strong>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2017/12/30/windows安装python/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">

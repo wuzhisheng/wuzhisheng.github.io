@@ -15,17 +15,27 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="##环境  如图所示lvs-server：两块网卡（nat和VM1）web1和web2（网卡VM1 要配置网关 192.168.1.1）">
+<meta name="keywords" content="-Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.520jd.me/2018/10/01/hello-world/index.html">
+<meta property="og:title" content="LVS+nat群集">
+<meta property="og:url" content="http://blog.520jd.me/2018/01/02/LVS-nat群集/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="##环境  如图所示lvs-server：两块网卡（nat和VM1）web1和web2（网卡VM1 要配置网关 192.168.1.1）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T10:14:29.567Z">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201805/01110050_fQeV.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201805/01110111_bskU.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201805/01110122_hhNY.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201805/01110155_iOB9.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201805/01110202_9nub.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201805/01110217_c6IR.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201805/01110222_0pcl.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201805/01110255_scKj.png">
+<meta property="og:updated_time" content="2018-05-01T03:27:57.185Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="LVS+nat群集">
+<meta name="twitter:description" content="##环境  如图所示lvs-server：两块网卡（nat和VM1）web1和web2（网卡VM1 要配置网关 192.168.1.1）">
+<meta name="twitter:image" content="https://static.oschina.net/uploads/img/201805/01110050_fQeV.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +67,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | 个人博客|吴志盛</title>
+<title>LVS+nat群集 | 个人博客|吴志盛</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -276,11 +286,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-LVS-nat群集" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/10/01/hello-world/" class="article-date">
-      <time datetime="2018-10-01T10:14:29.567Z" itemprop="datePublished">2018-10-01</time>
+      <a href="/2018/01/02/LVS-nat群集/" class="article-date">
+      <time datetime="2018-01-02T06:52:28.000Z" itemprop="datePublished">2018-01-02</time>
 </a>
 
 
@@ -295,7 +305,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      LVS+nat群集
     </h1>
   
 
@@ -305,6 +315,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">-Linux</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -312,15 +326,41 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>##环境<br><img src="https://static.oschina.net/uploads/img/201805/01110050_fQeV.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<blockquote>
+<p>如图所示<br>lvs-server：两块网卡（nat和VM1）<br>web1和web2（网卡VM1 要配置网关 192.168.1.1）<br><a id="more"></a></p>
+</blockquote>
+<h3 id="NFS"><a href="#NFS" class="headerlink" title="NFS"></a>NFS</h3><h4 id="配置ip"><a href="#配置ip" class="headerlink" title="配置ip"></a>配置ip</h4><blockquote>
+<p>配置IP：192.168.1.250/24<br>ping 192.168.1.1</p>
+</blockquote>
+<h4 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">关闭iptables</span><br><span class="line">systemctl stop iptables</span><br><span class="line"></span><br><span class="line">关闭selinux</span><br><span class="line">setenforce 0</span><br><span class="line">vim /etc/sysconfig/seliunx</span><br><span class="line">disable</span><br><span class="line"></span><br><span class="line">查看SELinux的系统的状态</span><br><span class="line">sestatus</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201805/01110111_bskU.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4 id="nfs配置"><a href="#nfs配置" class="headerlink" title="nfs配置"></a>nfs配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mkdir /webdata</span><br><span class="line"></span><br><span class="line">vim /webdata/index.html</span><br><span class="line">this is nfs</span><br><span class="line"></span><br><span class="line">echo &quot;/webdata 192.168.1.0/24(rw,sync,no_root_squash)&quot;&gt;&gt;/etc/exports</span><br><span class="line"></span><br><span class="line">systemctl restart nfs</span><br><span class="line"></span><br><span class="line">验证：看是否有共享文件</span><br><span class="line">showmount -e</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201805/01110122_hhNY.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3 id="WEB1"><a href="#WEB1" class="headerlink" title="WEB1"></a>WEB1</h3><h4 id="配置IP"><a href="#配置IP" class="headerlink" title="配置IP"></a>配置IP</h4><blockquote>
+<p><strong>IP:192.168.1.177/24 192.168.1.1 </strong></p>
+</blockquote>
+<h4 id="关闭防火墙-1"><a href="#关闭防火墙-1" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">关闭iptables</span><br><span class="line">systemctl stop iptables</span><br><span class="line"></span><br><span class="line">关闭selinux</span><br><span class="line">setenforce 0</span><br><span class="line">vim /etc/sysconfig/seliunx</span><br><span class="line">disable</span><br></pre></td></tr></table></figure>
+<h4 id="LAMP安装"><a href="#LAMP安装" class="headerlink" title="LAMP安装"></a>LAMP安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install httpd mysql mysql-server php-mysql php</span><br><span class="line">ll /var/www/html</span><br></pre></td></tr></table></figure>
+<h4 id="nfs挂载"><a href="#nfs挂载" class="headerlink" title="nfs挂载"></a>nfs挂载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">查看是否有共享目录</span><br><span class="line">showmount -e 192.168.1.250</span><br><span class="line"></span><br><span class="line">nfs挂载</span><br><span class="line">mount -t nfs  192.168.1.250:/webdata /var/www/html</span><br><span class="line"></span><br><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure>
+<h3 id="WEB2配置与WEB1一样"><a href="#WEB2配置与WEB1一样" class="headerlink" title="WEB2配置与WEB1一样"></a>WEB2配置与WEB1一样</h3><h3 id="lvs-server"><a href="#lvs-server" class="headerlink" title="lvs-server"></a>lvs-server</h3><h4 id="配置ip-1"><a href="#配置ip-1" class="headerlink" title="配置ip"></a>配置ip</h4><blockquote>
+<p>ip:202.96.128.80(外nat)<br>ip:192.168.1.1(内VM1)</p>
+</blockquote>
+<h4 id="配置（开机启动）路由转发"><a href="#配置（开机启动）路由转发" class="headerlink" title="配置（开机启动）路由转发"></a>配置（开机启动）路由转发</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysctl.conf 在文件末尾直接追加</span><br><span class="line">net.ipv4.ip_forward=1</span><br><span class="line">net.ipv4.conf.all.rp_filter=0</span><br><span class="line">net.ipv4.conf.default.rp_filter=0</span><br><span class="line"></span><br><span class="line">让配置立马生效</span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+<h4 id="配置iptables"><a href="#配置iptables" class="headerlink" title="配置iptables"></a>配置iptables</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">iptables -L  显示所有iptables链</span><br><span class="line">iptables -F  清空所选链</span><br><span class="line"></span><br><span class="line">iptables -L -t nat  再查看nat链是否存在</span><br><span class="line">iptables -L -F nat  清空nat链</span><br><span class="line"></span><br><span class="line">添加新nat的iptables规则</span><br><span class="line">iptables -t nat -I POSTROUTING -s 192.168.1.0/24 -o eth1（外） -j SNAT --to-source 202.96.128.80</span><br><span class="line"></span><br><span class="line">-t   被指定tcp</span><br><span class="line">-I	 插入一条或更多规则</span><br><span class="line">-s	 指定源地址</span><br><span class="line">-o 	 指定输出接口[名称]</span><br><span class="line">-j    指定规则的目标</span><br><span class="line"></span><br><span class="line">显示指定nat的iptables规则</span><br><span class="line">iptables -t nat -L</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201805/01110155_iOB9.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4 id="ipvsadm"><a href="#ipvsadm" class="headerlink" title="ipvsadm"></a>ipvsadm</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">modprobe ip_vs  加载该模块</span><br><span class="line"></span><br><span class="line">下载ipvsadm工具</span><br><span class="line">yum -y install ipvsadm</span><br><span class="line">systemctl restart ipvsadm</span><br><span class="line"></span><br><span class="line">setenforce 0</span><br><span class="line"></span><br><span class="line">ip add</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201805/01110202_9nub.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">添加地址为202.96.128.80:80的虚拟服务，指定调度算法为轮转</span><br><span class="line">ipvsadm -A -t  202.96.128.80:80 -s rr</span><br><span class="line"></span><br><span class="line">添加真实服务器，指定传输模式为NAT</span><br><span class="line">ipvsadm -a -t 202.96.128.80:80 -r 192.168.1.177:80 -m</span><br><span class="line">ipvsadm -a -t 202.96.128.80:80 -r 192.168.1.178:80 -m</span><br><span class="line">-A  添加一条新的虚拟服务器记录</span><br><span class="line">-a 添加一条新的虚拟服务器记录</span><br><span class="line">-t TCP</span><br><span class="line">-s 调度rr算法</span><br><span class="line">-r 指向真实的服务</span><br><span class="line">-m 真实的服务器</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">systemctl save ipvsadm</span><br><span class="line"></span><br><span class="line">cat /etc/sysconfig/ipvsadm</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201805/01110217_c6IR.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">显示内核虚拟服务器表</span><br><span class="line">ipvsadm -L</span><br></pre></td></tr></table></figure>
+<p><img src="https://static.oschina.net/uploads/img/201805/01110222_0pcl.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><blockquote>
+<p>本地物理机<br>nat网卡能通<br>打开打开本机浏览器<br>202.96.128.80<br>查看<strong>lvs-server</strong><br>有没调度<br><img src="https://static.oschina.net/uploads/img/201805/01110255_scKj.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+</blockquote>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><blockquote>
+<p>负载均衡<br>有效屏蔽内网服务器，保护内网安全。<br>但是速度比直路由器慢</p>
+</blockquote>
 
       
     </div>
@@ -329,13 +369,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/10/01/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2018/01/02/LVS-nat群集/">LVS+nat群集</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
-        <p><span>发布时间:</span>2018-10-01, 18:14:29</p>
-        <p><span>最后更新:</span>2018-10-01, 18:14:29</p>
+        <p><span>发布时间:</span>2018-01-02, 14:52:28</p>
+        <p><span>最后更新:</span>2018-05-01, 11:27:57</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/10/01/hello-world/" title="Hello World">http://blog.520jd.me/2018/10/01/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/01/hello-world/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/01/02/LVS-nat群集/" title="LVS+nat群集">http://blog.520jd.me/2018/01/02/LVS-nat群集/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/01/02/LVS-nat群集/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -347,10 +387,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/01/19/zabbix3-0安装/">
+                    zabbix3.0安装
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/16/pssh批量处理/">
-                    pssh批量处理
+                <a href="/2017/12/30/python一行命令搭建ftp/">
+                    python一行命令搭建ftp
                 </a>
             </div>
         
@@ -362,7 +408,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#NFS"><span class="toc-number">1.</span> <span class="toc-text">NFS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置ip"><span class="toc-number">1.1.</span> <span class="toc-text">配置ip</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关闭防火墙"><span class="toc-number">1.2.</span> <span class="toc-text">关闭防火墙</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nfs配置"><span class="toc-number">1.3.</span> <span class="toc-text">nfs配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WEB1"><span class="toc-number">2.</span> <span class="toc-text">WEB1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置IP"><span class="toc-number">2.1.</span> <span class="toc-text">配置IP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关闭防火墙-1"><span class="toc-number">2.2.</span> <span class="toc-text">关闭防火墙</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LAMP安装"><span class="toc-number">2.3.</span> <span class="toc-text">LAMP安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nfs挂载"><span class="toc-number">2.4.</span> <span class="toc-text">nfs挂载</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WEB2配置与WEB1一样"><span class="toc-number">3.</span> <span class="toc-text">WEB2配置与WEB1一样</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lvs-server"><span class="toc-number">4.</span> <span class="toc-text">lvs-server</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置ip-1"><span class="toc-number">4.1.</span> <span class="toc-text">配置ip</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置（开机启动）路由转发"><span class="toc-number">4.2.</span> <span class="toc-text">配置（开机启动）路由转发</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置iptables"><span class="toc-number">4.3.</span> <span class="toc-text">配置iptables</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ipvsadm"><span class="toc-number">4.4.</span> <span class="toc-text">ipvsadm</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-number">5.</span> <span class="toc-text">测试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#特点"><span class="toc-number">5.1.</span> <span class="toc-text">特点</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -398,7 +444,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"LVS+nat群集　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -420,13 +466,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/01/19/zabbix3-0安装/" title="上一篇: zabbix3.0安装">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/09/16/pssh批量处理/" title="下一篇: pssh批量处理">
+            <a href="/2017/12/30/python一行命令搭建ftp/" title="下一篇: python一行命令搭建ftp">
                 <i class="fa fa-angle-right"></i>
             </a>
         

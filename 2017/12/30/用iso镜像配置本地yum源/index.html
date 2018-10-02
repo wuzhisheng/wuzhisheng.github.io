@@ -15,17 +15,20 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="用iso镜像配置本地yum源在虚拟机安装iso 镜像挂载">
+<meta name="keywords" content="linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.520jd.me/2018/10/01/hello-world/index.html">
+<meta property="og:title" content="用iso镜像配置本地yum源">
+<meta property="og:url" content="http://blog.520jd.me/2017/12/30/用iso镜像配置本地yum源/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="用iso镜像配置本地yum源在虚拟机安装iso 镜像挂载">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T10:14:29.567Z">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201712/30160146_gfYj.png">
+<meta property="og:updated_time" content="2017-12-30T08:05:57.994Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="用iso镜像配置本地yum源">
+<meta name="twitter:description" content="用iso镜像配置本地yum源在虚拟机安装iso 镜像挂载">
+<meta name="twitter:image" content="https://static.oschina.net/uploads/img/201712/30160146_gfYj.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +60,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | 个人博客|吴志盛</title>
+<title>用iso镜像配置本地yum源 | 个人博客|吴志盛</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -276,11 +279,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-用iso镜像配置本地yum源" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/10/01/hello-world/" class="article-date">
-      <time datetime="2018-10-01T10:14:29.567Z" itemprop="datePublished">2018-10-01</time>
+      <a href="/2017/12/30/用iso镜像配置本地yum源/" class="article-date">
+      <time datetime="2017-12-30T08:03:14.000Z" itemprop="datePublished">2017-12-30</time>
 </a>
 
 
@@ -295,7 +298,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      用iso镜像配置本地yum源
     </h1>
   
 
@@ -305,6 +308,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -312,16 +319,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h2 id="用iso镜像配置本地yum源"><a href="#用iso镜像配置本地yum源" class="headerlink" title="用iso镜像配置本地yum源"></a>用iso镜像配置本地yum源</h2><h3 id="在虚拟机安装iso"><a href="#在虚拟机安装iso" class="headerlink" title="在虚拟机安装iso"></a>在虚拟机安装iso</h3><p><img src="https://static.oschina.net/uploads/img/201712/30160146_gfYj.png" alt="输入图片说明"></p>
+<h3 id="镜像挂载"><a href="#镜像挂载" class="headerlink" title="镜像挂载"></a>镜像挂载</h3><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mkdir /centos</span><br><span class="line"></span><br><span class="line">mount /dev/cdrom /centos</span><br><span class="line">或者</span><br><span class="line">mount -t iso9660 /dev/sro /centos</span><br><span class="line"></span><br><span class="line">echo &quot;/dev/sr0 /centos iso9660 defaults，ro 0 0&quot;&gt;&gt;/etc/fstab</span><br><span class="line">或者</span><br><span class="line">echo &quot;/dev/cdrom /centos iso9660 defaults 0 0&quot; &gt;&gt; /etc/fstab</span><br></pre></td></tr></table></figure>
+<ul>
+<li>/dev/cdrom 是/dev/sr0 链接</li>
+</ul>
+<h3 id="创建yum源"><a href="#创建yum源" class="headerlink" title="创建yum源"></a>创建yum源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d</span><br><span class="line">mv * /tmp 将原来的yum源移走</span><br><span class="line"></span><br><span class="line">vim systme.repo  必须以repo结尾</span><br><span class="line">[system]</span><br><span class="line">name=system</span><br><span class="line">baseurl=file:///centos</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck= 0  0表示不用检查</span><br></pre></td></tr></table></figure>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum clean all 清除缓存</span><br><span class="line"></span><br><span class="line">yum list 验证（查看是否有包）</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -329,13 +334,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/10/01/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2017/12/30/用iso镜像配置本地yum源/">用iso镜像配置本地yum源</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
-        <p><span>发布时间:</span>2018-10-01, 18:14:29</p>
-        <p><span>最后更新:</span>2018-10-01, 18:14:29</p>
+        <p><span>发布时间:</span>2017-12-30, 16:03:14</p>
+        <p><span>最后更新:</span>2017-12-30, 16:05:57</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/10/01/hello-world/" title="Hello World">http://blog.520jd.me/2018/10/01/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/01/hello-world/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/30/用iso镜像配置本地yum源/" title="用iso镜像配置本地yum源">http://blog.520jd.me/2017/12/30/用iso镜像配置本地yum源/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2017/12/30/用iso镜像配置本地yum源/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -347,10 +352,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/12/30/Centos7-DNS服务/">
+                    Centos7  DNS服务
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/16/pssh批量处理/">
-                    pssh批量处理
+                <a href="/2017/12/30/Docker常用操作命令/">
+                    Docker常用操作命令
                 </a>
             </div>
         
@@ -362,7 +373,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#用iso镜像配置本地yum源"><span class="toc-number">1.</span> <span class="toc-text">用iso镜像配置本地yum源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在虚拟机安装iso"><span class="toc-number">1.1.</span> <span class="toc-text">在虚拟机安装iso</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#镜像挂载"><span class="toc-number">1.2.</span> <span class="toc-text">镜像挂载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建yum源"><span class="toc-number">1.3.</span> <span class="toc-text">创建yum源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证"><span class="toc-number">1.4.</span> <span class="toc-text">验证</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -398,7 +409,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"用iso镜像配置本地yum源　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -420,13 +431,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/12/30/Centos7-DNS服务/" title="上一篇: Centos7  DNS服务">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/09/16/pssh批量处理/" title="下一篇: pssh批量处理">
+            <a href="/2017/12/30/Docker常用操作命令/" title="下一篇: Docker常用操作命令">
                 <i class="fa fa-angle-right"></i>
             </a>
         
