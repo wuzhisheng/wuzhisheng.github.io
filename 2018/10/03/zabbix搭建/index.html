@@ -15,24 +15,28 @@
 
 
 
-<meta name="description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
-<meta name="keywords" content="shell">
+<meta name="description" content="初始zabbix 常见监控软件cacti,nagios,zabbix,smokeping,open-falcon等cacti,nagios,zabbix 服务端监控中心，需要PHP环境支持。zabbix和cacti需要mysql作为数据存储，可以用数据成图nagios不用存储历史数据注重服务或者监控项的状态，成图需要插件zabbix会获取服务或者监控项目的数据，会把数据记录到数据库里，从而可以成图">
+<meta name="keywords" content="监控">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shell">
-<meta property="og:url" content="http://blog.520jd.me/2017/12/29/Shell/index.html">
+<meta property="og:title" content="zabbix搭建">
+<meta property="og:url" content="http://blog.520jd.me/2018/10/03/zabbix搭建/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
-<meta property="og:description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
+<meta property="og:description" content="初始zabbix 常见监控软件cacti,nagios,zabbix,smokeping,open-falcon等cacti,nagios,zabbix 服务端监控中心，需要PHP环境支持。zabbix和cacti需要mysql作为数据存储，可以用数据成图nagios不用存储历史数据注重服务或者监控项的状态，成图需要插件zabbix会获取服务或者监控项目的数据，会把数据记录到数据库里，从而可以成图">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1510727980770.png">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/2.png">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
-<meta property="og:updated_time" content="2017-12-29T15:22:10.371Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-f7283fd3acf307df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-2c5084e34e0e8273.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-602edb23296580fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-94aefad5dfd4f512.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-e7d5f82e2c911be9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-db898c77b2c79512.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-f9928e6c88379363.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-e5fde64fc8fa4958.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-fb79363062803214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-03T09:04:20.274Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shell">
-<meta name="twitter:description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
-<meta name="twitter:image" content="http://blog.520jd.me/2017/12/29/Shell/1510727980770.png">
+<meta name="twitter:title" content="zabbix搭建">
+<meta name="twitter:description" content="初始zabbix 常见监控软件cacti,nagios,zabbix,smokeping,open-falcon等cacti,nagios,zabbix 服务端监控中心，需要PHP环境支持。zabbix和cacti需要mysql作为数据存储，可以用数据成图nagios不用存储历史数据注重服务或者监控项的状态，成图需要插件zabbix会获取服务或者监控项目的数据，会把数据记录到数据库里，从而可以成图">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8735579-f7283fd3acf307df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -64,7 +68,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Shell | 个人博客|吴志盛</title>
+<title>zabbix搭建 | 个人博客|吴志盛</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -283,11 +287,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Shell" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-zabbix搭建" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/12/29/Shell/" class="article-date">
-      <time datetime="2017-12-29T15:17:22.000Z" itemprop="datePublished">2017-12-29</time>
+      <a href="/2018/10/03/zabbix搭建/" class="article-date">
+      <time datetime="2018-10-03T09:03:21.000Z" itemprop="datePublished">2018-10-03</time>
 </a>
 
 
@@ -302,7 +306,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Shell
+      zabbix搭建
     </h1>
   
 
@@ -313,7 +317,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/监控/">监控</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -323,21 +327,36 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h1><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><h3 id="echo-e-转义序列的字符串"><a href="#echo-e-转义序列的字符串" class="headerlink" title="echo -e  +  转义序列的字符串"></a>echo -e  +  转义序列的字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">echo -e &quot;1\t2\t3&quot;</span><br><span class="line">1 2 3</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo -e &quot;\e[31m This is red text&quot;   字体设置为红色</span><br><span class="line"></span><br><span class="line">echo -e &quot;\e[1;42m Green Background &quot;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<blockquote>
-<p><strong>字体</strong><br>重置=0，黑色=30，红色=31，绿色=32，黄色=33，蓝<br>色=34，洋红=35，青色=36，白色=37。<br><strong>背景颜色</strong><br>重置=0，黑色=40，红色=41，绿色=42，黄色=43，<br>蓝色=44，洋红=45，青色=46，白色=47</p>
+        <h2 id="初始zabbix"><a href="#初始zabbix" class="headerlink" title="初始zabbix"></a>初始zabbix</h2><blockquote>
+<p><strong>常见监控软件</strong><br>cacti,nagios,zabbix,smokeping,open-falcon等<br>cacti,nagios,zabbix 服务端监控中心，需要PHP环境支持。<br>zabbix和cacti需要mysql作为数据存储，可以用数据成图<br>nagios不用存储历史数据注重服务或者监控项的状态，成图需要插件<br>zabbix会获取服务或者监控项目的数据，会把数据记录到数据库里，从而可以成图</p>
 </blockquote>
-<h3 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# len=123456789</span><br><span class="line">[root@localhost ~]# echo $len</span><br><span class="line">123456789</span><br><span class="line">[root@localhost ~]# echo $&#123;len&#125;</span><br><span class="line">123456789</span><br><span class="line"></span><br><span class="line">显示当前环境变量</span><br><span class="line">[root@localhost ~]# echo $SHELL </span><br><span class="line">/bin/bash</span><br><span class="line">[root@localhost ~]# echo $0</span><br><span class="line">-bash</span><br><span class="line"></span><br><span class="line">计算长度</span><br><span class="line">[root@localhost ~]# len=123456789</span><br><span class="line">[root@localhost ~]# echo $&#123;#len&#125;</span><br><span class="line">9</span><br><span class="line"></span><br><span class="line">检查是否为超级用户</span><br><span class="line">[root@localhost ~]# echo $UID</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# let wu=4+2</span><br><span class="line">6</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# let wu+=6</span><br><span class="line">[root@localhost ~]# echo $wu</span><br><span class="line">12</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# let wu++</span><br><span class="line">[root@localhost ~]# echo $wu</span><br><span class="line">13</span><br><span class="line"></span><br><span class="line">13</span><br><span class="line">[root@localhost ~]# zhi=$[7+5]</span><br><span class="line">[root@localhost ~]# echo $zhi</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
-<h4 id="bc"><a href="#bc" class="headerlink" title="bc"></a>bc</h4><p><strong>执行浮点数运算并应用一些高级函数</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# echo &quot;4 * 0.56&quot; | bc</span><br><span class="line">2.24</span><br><span class="line"></span><br><span class="line">scale=2将小数位个数设置为2</span><br><span class="line">[root@localhost ~]# echo &quot;scale=2;3/8&quot;|bc</span><br><span class="line">0.37</span><br><span class="line"></span><br><span class="line">obase=2 转化为二进制</span><br><span class="line">[root@localhost ~]# echo &quot;obase=2;100&quot;|bc</span><br><span class="line">1100100</span><br><span class="line"></span><br><span class="line">平方根</span><br><span class="line">[root@localhost ~]# echo &quot;sqrt(100)&quot; | bc </span><br><span class="line">10</span><br><span class="line"></span><br><span class="line">平方</span><br><span class="line">[root@localhost ~]# echo &quot;5^2&quot; | bc           </span><br><span class="line">25</span><br></pre></td></tr></table></figure></p>
-<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# array=(1 2 3 4 5 6)</span><br><span class="line">[root@localhost ~]# echo $&#123;#array[*]&#125;</span><br><span class="line">6</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo $&#123;array[0]&#125;</span><br><span class="line">1</span><br><span class="line">[root@localhost ~]# echo $&#123;array[1]&#125;</span><br><span class="line">2</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo $&#123;array[0]&#125;</span><br><span class="line">wu</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# sz=([name]=&apos;wu&apos; [age]=18)</span><br><span class="line">[root@localhost ~]# echo $&#123;sz=[age]&#125;</span><br><span class="line">18</span><br></pre></td></tr></table></figure>
-<h4 id="设置时间"><a href="#设置时间" class="headerlink" title="设置时间"></a>设置时间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# date</span><br><span class="line">Wed Nov 15 01:33:40 EST 2017</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# date &quot;+%Y %b %d %H %M %S&quot;</span><br><span class="line">2017 Nov 15 14 40 36</span><br><span class="line"></span><br><span class="line">修改时间</span><br><span class="line">[root@localhost ~]# date -s &quot;21 June 2008 11:01:22&quot;</span><br><span class="line">Sat Jun 21 11:01:22 EDT 2008 </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# date -s &quot;15 November 2017 14:35:22&quot;</span><br><span class="line">Wed Nov 15 14:35:22 EST 2017</span><br></pre></td></tr></table></figure>
-<p><img src="./1510727980770.png" alt="Alt text"></p>
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><img src="./1.png" alt="Alt text"><br><img src="./2.png" alt="Alt text"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost dir]# cat file </span><br><span class="line">#!/bin/bash</span><br><span class="line">x=0</span><br><span class="line">until [ $x -eq 9 ];</span><br><span class="line">do</span><br><span class="line">let x++;echo $x;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
-<h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><p><img src="./1.png" alt="Alt text"><br><img src="./1.png" alt="Alt text"></p>
 <blockquote>
-<p>&amp;&amp; 和   || 或</p>
+<p>c/s架构，基于c++开发，监控中心支持web界面配置和管理<br>Zabbix-server 监控中心，接收客户端上报信息，负责配置，统计，操作数据，数据存储，存放数据<br>可在web界面，操作配置zabbix<br>zabbix-proxy（可选组件）：代替zabbix-server的功能，减轻server的压力<br>zabbix-agent客户端软件，负责采集各个监控服务或项目的数据，并上报</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-f7283fd3acf307df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="zabbix流程图"><br><a id="more"></a></p>
+<h2 id="服务端安装"><a href="#服务端安装" class="headerlink" title="服务端安装"></a>服务端安装</h2><h3 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">wget  http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/zabbix-release-3.2-1.el7.noarch.rpm]</span><br><span class="line">rpm -ivh  zabbix-release-3.2-1.el7.noarch.rpm</span><br><span class="line">cat /etc/yum.repos.d/zabbix.repo  #该文件是rpm安装的yum源</span><br><span class="line">yum install -y zabbix-agent zabbix-get zabbix-server-mysql  zabbix-web zabbix-web-mysql</span><br><span class="line"></span><br><span class="line">#zabbix-agent  客户端</span><br><span class="line">#zabbix-get 服务端监控工具，可获得监控数据</span><br><span class="line">#zabbix-server-mysql 导入监控数据</span><br><span class="line">#zabbix-web  图形界面（基于php编写的）</span><br><span class="line">#zabbix-web-mysql   图形界面与mysql联系</span><br></pre></td></tr></table></figure>
+<h3 id="安装-配置mysql"><a href="#安装-配置mysql" class="headerlink" title="安装/配置mysql"></a>安装/配置mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mariadb mariadb-server</span><br><span class="line">systemctl start mariadb.service</span><br><span class="line">mysql_secure_installation</span><br><span class="line">ps aux|grep mysql</span><br><span class="line">less /data/mysql/aminglinux01.err  #若失败查看日志</span><br><span class="line"></span><br><span class="line">mysql -uroot -pcnhope</span><br><span class="line">create database zabbix character set utf8;</span><br><span class="line">允许ui界面，zabbix-server连接数据库</span><br><span class="line">grant all on zabbix.* to &apos;zabbix&apos;@&apos;127.0.0.1&apos; identified by &apos;cnhope&apos;;  </span><br><span class="line"></span><br><span class="line">vim /etc/my.cnf</span><br><span class="line">[mysqld]</span><br><span class="line">character_set_server=utf8 #设置字符集utf-8</span><br><span class="line">service  restart mysql</span><br></pre></td></tr></table></figure>
+<h3 id="导入数据"><a href="#导入数据" class="headerlink" title="导入数据"></a>导入数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/share/doc/zabbix-server-mysql-3.2.11/ #可用table补全</span><br><span class="line">ls</span><br><span class="line">gzip -d create.sql.gz</span><br><span class="line">ls</span><br><span class="line">mysql  -uroot -pcnhope zabbix &lt;create.sql  #将数据导入zabbix中</span><br><span class="line"></span><br><span class="line">systemctl start zabbix-server</span><br><span class="line">systemctl enable zabbix-server</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>若启动失败</strong><br>Jul  9 18:59:35 localhost systemd: PID file /run/zabbix/zabbix_server.pid not readable (yet?) after start.<br>Jul  9 18:59:35 localhost systemd: zabbix-server.service never wrote its PID file. Failing.<br>Jul  9 18:59:35 localhost systemd: Failed to start Zabbix Server.<br><strong>解决：</strong><br>将selinux关闭<br>vim /etc/sysconfig/selinux<br>SELINUX=disabled<br>systemctl start httpd  #若启动失败，netstat查看是否有占用80端口<br>systemctl enable httpd </p>
+</blockquote>
+<h3 id="配置zabbix-server-conf"><a href="#配置zabbix-server-conf" class="headerlink" title="配置zabbix_server.conf"></a>配置zabbix_server.conf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1.检测</span><br><span class="line">ps aux|grep zabbix #检查zabbix进程</span><br><span class="line">[root@localhost ~]# ps aux|grep zabbix</span><br><span class="line">zabbix     1602  0.0  0.2 254720  3840 ?        S    19:13   0:00 /usr/sbin/zabbix_server -c /etc/zabbix/zabbix_server.conf</span><br><span class="line">root       1714  0.0  0.0 112660   972 pts/0    S+   19:20   0:00 grep --color=auto zabbix</span><br><span class="line"></span><br><span class="line">netstat  -anltp |grep zabbix #看是否有启用监听端口号10051</span><br><span class="line">less /var/log/zabbix/zabbix_server.log  #若监听端口没有启动可查看日志</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">vim /etc/zabbix/zabbix_server.conf  #有修改，没有增加</span><br><span class="line">DBHost=127.0.0.1 #在DBHost下面增加</span><br><span class="line">DBPassword=cnhope #在DBUser下面增加</span><br><span class="line">systemctl restart zabbix-server</span><br><span class="line">netstat -lntp|grep zabbix #查看监听端口</span><br><span class="line">systemctl stop firewalld  #关闭防火墙</span><br></pre></td></tr></table></figure>
+<h3 id="zabbix图形界面配置"><a href="#zabbix图形界面配置" class="headerlink" title="zabbix图形界面配置"></a>zabbix图形界面配置</h3><p><img src="https://upload-images.jianshu.io/upload_images/8735579-2c5084e34e0e8273.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="welcome"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-602edb23296580fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="check of pre-requisites"></p>
+<blockquote>
+<p><strong>check of pre-requisites界面显示 php  fail</strong><br>vim /etc/php.ini<br>date.timezone =Asia/shanghai<br>systemctl restart httpd   </p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-94aefad5dfd4f512.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="check of pre-requisites"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-e7d5f82e2c911be9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="configure DB connection"></p>
+<blockquote>
+<p>Database host和password都按创建mysql中</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-db898c77b2c79512.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="zabbix server details"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-f9928e6c88379363.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="pre-installation summary"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-e5fde64fc8fa4958.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录界面"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-fb79363062803214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="zabbix首页"></p>
+<blockquote>
+<p><strong>登录界面默认</strong><br>Username:Admin<br>Password:zabbix</p>
 </blockquote>
 
       
@@ -347,13 +366,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/12/29/Shell/">Shell</a></p>
+        <p><span>本文标题:</span><a href="/2018/10/03/zabbix搭建/">zabbix搭建</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
-        <p><span>发布时间:</span>2017-12-29, 23:17:22</p>
-        <p><span>最后更新:</span>2017-12-29, 23:22:10</p>
+        <p><span>发布时间:</span>2018-10-03, 17:03:21</p>
+        <p><span>最后更新:</span>2018-10-03, 17:04:20</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/12/29/Shell/" title="Shell">http://blog.520jd.me/2017/12/29/Shell/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2017/12/29/Shell/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/10/03/zabbix搭建/" title="zabbix搭建">http://blog.520jd.me/2018/10/03/zabbix搭建/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/03/zabbix搭建/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -366,15 +385,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/12/30/Docker常用操作命令/">
-                    Docker常用操作命令
+                <a href="/2018/10/03/zabbix修改-忘记密码/">
+                    zabbix修改/忘记密码
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/12/28/windows平台安装MongoDB/">
-                    windows平台安装MongoDB
+                <a href="/2018/10/03/Mysql备份，还原/">
+                    Mysql备份，还原
                 </a>
             </div>
         
@@ -386,7 +405,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shell"><span class="toc-number">1.</span> <span class="toc-text">shell</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#echo-e-转义序列的字符串"><span class="toc-number">1.1.1.</span> <span class="toc-text">echo -e  +  转义序列的字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常识"><span class="toc-number">1.1.2.</span> <span class="toc-text">常识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算"><span class="toc-number">1.1.3.</span> <span class="toc-text">运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#let"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">let</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bc"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">bc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置时间"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">设置时间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">1.1.4.</span> <span class="toc-text">循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if"><span class="toc-number">1.1.5.</span> <span class="toc-text">if</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初始zabbix"><span class="toc-number">1.</span> <span class="toc-text">初始zabbix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务端安装"><span class="toc-number">2.</span> <span class="toc-text">服务端安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载安装包"><span class="toc-number">2.1.</span> <span class="toc-text">下载安装包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-配置mysql"><span class="toc-number">2.2.</span> <span class="toc-text">安装/配置mysql</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导入数据"><span class="toc-number">2.3.</span> <span class="toc-text">导入数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置zabbix-server-conf"><span class="toc-number">2.4.</span> <span class="toc-text">配置zabbix_server.conf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zabbix图形界面配置"><span class="toc-number">2.5.</span> <span class="toc-text">zabbix图形界面配置</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -422,7 +441,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Shell　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"zabbix搭建　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -444,7 +463,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/12/30/Docker常用操作命令/" title="上一篇: Docker常用操作命令">
+            <a href="/2018/10/03/zabbix修改-忘记密码/" title="上一篇: zabbix修改/忘记密码">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -452,7 +471,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/12/28/windows平台安装MongoDB/" title="下一篇: windows平台安装MongoDB">
+            <a href="/2018/10/03/Mysql备份，还原/" title="下一篇: Mysql备份，还原">
                 <i class="fa fa-angle-right"></i>
             </a>
         

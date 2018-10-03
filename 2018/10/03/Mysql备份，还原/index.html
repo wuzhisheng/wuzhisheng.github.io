@@ -15,24 +15,21 @@
 
 
 
-<meta name="description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
-<meta name="keywords" content="shell">
+<meta name="description" content="完全备份开启二进制1234567vim  /etc/my.cnf.d/server.cnf[mysqld]datadir=/var/lib/mysql  \\数据库默认路径log_bin=mysql-bin  #日志文件名称，末指定则按日期命名binlog_format=rowservice mysql restart否则没有xtrabackup_binlog_info文件">
+<meta name="keywords" content="Mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shell">
-<meta property="og:url" content="http://blog.520jd.me/2017/12/29/Shell/index.html">
+<meta property="og:title" content="Mysql备份，还原">
+<meta property="og:url" content="http://blog.520jd.me/2018/10/03/Mysql备份，还原/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
-<meta property="og:description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
+<meta property="og:description" content="完全备份开启二进制1234567vim  /etc/my.cnf.d/server.cnf[mysqld]datadir=/var/lib/mysql  \\数据库默认路径log_bin=mysql-bin  #日志文件名称，末指定则按日期命名binlog_format=rowservice mysql restart否则没有xtrabackup_binlog_info文件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1510727980770.png">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/2.png">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
-<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
-<meta property="og:updated_time" content="2017-12-29T15:22:10.371Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-77f974be4fcbd090.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-0a8337d92a8c34a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-03T09:02:21.283Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shell">
-<meta name="twitter:description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
-<meta name="twitter:image" content="http://blog.520jd.me/2017/12/29/Shell/1510727980770.png">
+<meta name="twitter:title" content="Mysql备份，还原">
+<meta name="twitter:description" content="完全备份开启二进制1234567vim  /etc/my.cnf.d/server.cnf[mysqld]datadir=/var/lib/mysql  \\数据库默认路径log_bin=mysql-bin  #日志文件名称，末指定则按日期命名binlog_format=rowservice mysql restart否则没有xtrabackup_binlog_info文件">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8735579-77f974be4fcbd090.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -64,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Shell | 个人博客|吴志盛</title>
+<title>Mysql备份，还原 | 个人博客|吴志盛</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -283,11 +280,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Shell" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Mysql备份，还原" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/12/29/Shell/" class="article-date">
-      <time datetime="2017-12-29T15:17:22.000Z" itemprop="datePublished">2017-12-29</time>
+      <a href="/2018/10/03/Mysql备份，还原/" class="article-date">
+      <time datetime="2018-10-03T09:01:21.000Z" itemprop="datePublished">2018-10-03</time>
 </a>
 
 
@@ -302,7 +299,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Shell
+      Mysql备份，还原
     </h1>
   
 
@@ -313,7 +310,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -323,21 +320,25 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h1><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><h3 id="echo-e-转义序列的字符串"><a href="#echo-e-转义序列的字符串" class="headerlink" title="echo -e  +  转义序列的字符串"></a>echo -e  +  转义序列的字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">echo -e &quot;1\t2\t3&quot;</span><br><span class="line">1 2 3</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo -e &quot;\e[31m This is red text&quot;   字体设置为红色</span><br><span class="line"></span><br><span class="line">echo -e &quot;\e[1;42m Green Background &quot;</span><br></pre></td></tr></table></figure>
+        <h3 id="完全备份"><a href="#完全备份" class="headerlink" title="完全备份"></a>完全备份</h3><h4 id="开启二进制"><a href="#开启二进制" class="headerlink" title="开启二进制"></a>开启二进制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/my.cnf.d/server.cnf</span><br><span class="line">[mysqld]</span><br><span class="line">datadir=/var/lib/mysql  \\数据库默认路径</span><br><span class="line">log_bin=mysql-bin  #日志文件名称，末指定则按日期命名</span><br><span class="line">binlog_format=row</span><br><span class="line">service mysql restart</span><br><span class="line">否则没有xtrabackup_binlog_info文件</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<blockquote>
-<p><strong>字体</strong><br>重置=0，黑色=30，红色=31，绿色=32，黄色=33，蓝<br>色=34，洋红=35，青色=36，白色=37。<br><strong>背景颜色</strong><br>重置=0，黑色=40，红色=41，绿色=42，黄色=43，<br>蓝色=44，洋红=45，青色=46，白色=47</p>
+<h4 id="备份数据"><a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h4><blockquote>
+<p>mkdir -p /data innobackupex –user=root –password=’cnhope’ /data<br>在备份的同时，备份数据会在备份目录下创建一个以当前日期时间为名字的目录存放备份文件<img src="https://upload-images.jianshu.io/upload_images/8735579-77f974be4fcbd090.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 </blockquote>
-<h3 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# len=123456789</span><br><span class="line">[root@localhost ~]# echo $len</span><br><span class="line">123456789</span><br><span class="line">[root@localhost ~]# echo $&#123;len&#125;</span><br><span class="line">123456789</span><br><span class="line"></span><br><span class="line">显示当前环境变量</span><br><span class="line">[root@localhost ~]# echo $SHELL </span><br><span class="line">/bin/bash</span><br><span class="line">[root@localhost ~]# echo $0</span><br><span class="line">-bash</span><br><span class="line"></span><br><span class="line">计算长度</span><br><span class="line">[root@localhost ~]# len=123456789</span><br><span class="line">[root@localhost ~]# echo $&#123;#len&#125;</span><br><span class="line">9</span><br><span class="line"></span><br><span class="line">检查是否为超级用户</span><br><span class="line">[root@localhost ~]# echo $UID</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# let wu=4+2</span><br><span class="line">6</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# let wu+=6</span><br><span class="line">[root@localhost ~]# echo $wu</span><br><span class="line">12</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# let wu++</span><br><span class="line">[root@localhost ~]# echo $wu</span><br><span class="line">13</span><br><span class="line"></span><br><span class="line">13</span><br><span class="line">[root@localhost ~]# zhi=$[7+5]</span><br><span class="line">[root@localhost ~]# echo $zhi</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
-<h4 id="bc"><a href="#bc" class="headerlink" title="bc"></a>bc</h4><p><strong>执行浮点数运算并应用一些高级函数</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# echo &quot;4 * 0.56&quot; | bc</span><br><span class="line">2.24</span><br><span class="line"></span><br><span class="line">scale=2将小数位个数设置为2</span><br><span class="line">[root@localhost ~]# echo &quot;scale=2;3/8&quot;|bc</span><br><span class="line">0.37</span><br><span class="line"></span><br><span class="line">obase=2 转化为二进制</span><br><span class="line">[root@localhost ~]# echo &quot;obase=2;100&quot;|bc</span><br><span class="line">1100100</span><br><span class="line"></span><br><span class="line">平方根</span><br><span class="line">[root@localhost ~]# echo &quot;sqrt(100)&quot; | bc </span><br><span class="line">10</span><br><span class="line"></span><br><span class="line">平方</span><br><span class="line">[root@localhost ~]# echo &quot;5^2&quot; | bc           </span><br><span class="line">25</span><br></pre></td></tr></table></figure></p>
-<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# array=(1 2 3 4 5 6)</span><br><span class="line">[root@localhost ~]# echo $&#123;#array[*]&#125;</span><br><span class="line">6</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo $&#123;array[0]&#125;</span><br><span class="line">1</span><br><span class="line">[root@localhost ~]# echo $&#123;array[1]&#125;</span><br><span class="line">2</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo $&#123;array[0]&#125;</span><br><span class="line">wu</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# sz=([name]=&apos;wu&apos; [age]=18)</span><br><span class="line">[root@localhost ~]# echo $&#123;sz=[age]&#125;</span><br><span class="line">18</span><br></pre></td></tr></table></figure>
-<h4 id="设置时间"><a href="#设置时间" class="headerlink" title="设置时间"></a>设置时间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# date</span><br><span class="line">Wed Nov 15 01:33:40 EST 2017</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# date &quot;+%Y %b %d %H %M %S&quot;</span><br><span class="line">2017 Nov 15 14 40 36</span><br><span class="line"></span><br><span class="line">修改时间</span><br><span class="line">[root@localhost ~]# date -s &quot;21 June 2008 11:01:22&quot;</span><br><span class="line">Sat Jun 21 11:01:22 EDT 2008 </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# date -s &quot;15 November 2017 14:35:22&quot;</span><br><span class="line">Wed Nov 15 14:35:22 EST 2017</span><br></pre></td></tr></table></figure>
-<p><img src="./1510727980770.png" alt="Alt text"></p>
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><img src="./1.png" alt="Alt text"><br><img src="./2.png" alt="Alt text"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost dir]# cat file </span><br><span class="line">#!/bin/bash</span><br><span class="line">x=0</span><br><span class="line">until [ $x -eq 9 ];</span><br><span class="line">do</span><br><span class="line">let x++;echo $x;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
-<h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><p><img src="./1.png" alt="Alt text"><br><img src="./1.png" alt="Alt text"></p>
 <blockquote>
-<p>&amp;&amp; 和   || 或</p>
+<p>如果数据库太大，可以选择压缩备份来提升备份效率<br>innobackupex –user=root –password=’cnhope’ –stream=tar /data | gzip -&gt; /data/`date +%F`.tar<img src="https://upload-images.jianshu.io/upload_images/8735579-0a8337d92a8c34a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</blockquote>
+<p><code>将mysql01机备份文件移至mysql02机上：</code></p>
+<h3 id="还原数据库"><a href="#还原数据库" class="headerlink" title="还原数据库"></a>还原数据库</h3><h4 id="方法一：使用2018-06-11-15-30-47还原"><a href="#方法一：使用2018-06-11-15-30-47还原" class="headerlink" title="方法一：使用2018-06-11_15-30-47还原"></a>方法一：使用2018-06-11_15-30-47还原</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql02 data]# service mysql stop </span><br><span class="line">[root@mysql02 data]# rm -rf /var/lib/mysql/* </span><br><span class="line">[root@mysql02 data]# innobackupex --copy-back 2018-06-11_15-30-47/</span><br><span class="line">[root@mysql02 data]# innobackupex --apply-log /var/lib/mysql</span><br><span class="line">[root@mysql02 data]# innobackupex --apply-log /var/lib/mysql --ibbackup xtrabackup_55</span><br><span class="line">[root@mysql02 data]# chown -R mysql:mysql /var/lib/mysql</span><br><span class="line">[root@mysql02 data]# service mysql start</span><br><span class="line">[root@mysql02 data]# mysql -uroot –pcnhope</span><br></pre></td></tr></table></figure>
+<h4 id="方法二：使用2018-06-11-tar还原"><a href="#方法二：使用2018-06-11-tar还原" class="headerlink" title="方法二：使用2018-06-11.tar还原"></a>方法二：使用2018-06-11.tar还原</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql02 data]# service mysql stop </span><br><span class="line">[root@mysql02 data]# rm -rf /var/lib/mysql/* </span><br><span class="line">[root@mysql02 data]#tar -ixvf 2018-06-11.tar -C /var/lib/mysql/</span><br><span class="line">[root@mysql02 data]# innobackupex --apply-log /var/lib/mysql!</span><br><span class="line">[root@mysql02 data]# chown -R mysql:mysql /var/lib/mysql </span><br><span class="line">[root@mysql02 data]# service mysql start</span><br></pre></td></tr></table></figure>
+<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><blockquote>
+<p>innobackupex –apply-log /var/lib/mysql 出错<br>则查看下进程:<br>ps –ef|grep mysql kill + 进程号</p>
+</blockquote>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="一，"><a href="#一，" class="headerlink" title="一，"></a>一，</h4><blockquote>
+<p><strong>innobackupex –apply-log /var/lib/mysql</strong><br>一般情况下，在备份完成后，数据尚且不能用于恢复操作，因为备份的数据中可能会包含尚未提交的事务或已经提交但尚未同步至数据文件中的事务。因此，此时数据文件仍处理不一致状态。“准备”的主要作用正是通过回滚未提交的事务及同步已经提交的事务至数据文件也使得数据文件处于一致性状态。(这样才能使用备份的数据)</p>
+</blockquote>
+<h4 id="二，"><a href="#二，" class="headerlink" title="二，"></a>二，</h4><blockquote>
+<p><strong>innobackupex –copy-back 2018-06-11_15-30-47/</strong><br>innobackupex命令的–copy-back选项用于执行恢复操作，其通过复制所有数据相关的文件至mysql服务器DATADIR目录中来执行恢复过程。</p>
 </blockquote>
 
       
@@ -347,13 +348,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/12/29/Shell/">Shell</a></p>
+        <p><span>本文标题:</span><a href="/2018/10/03/Mysql备份，还原/">Mysql备份，还原</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
-        <p><span>发布时间:</span>2017-12-29, 23:17:22</p>
-        <p><span>最后更新:</span>2017-12-29, 23:22:10</p>
+        <p><span>发布时间:</span>2018-10-03, 17:01:21</p>
+        <p><span>最后更新:</span>2018-10-03, 17:02:21</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/12/29/Shell/" title="Shell">http://blog.520jd.me/2017/12/29/Shell/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2017/12/29/Shell/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/10/03/Mysql备份，还原/" title="Mysql备份，还原">http://blog.520jd.me/2018/10/03/Mysql备份，还原/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/03/Mysql备份，还原/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -366,15 +367,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/12/30/Docker常用操作命令/">
-                    Docker常用操作命令
+                <a href="/2018/10/03/zabbix搭建/">
+                    zabbix搭建
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/12/28/windows平台安装MongoDB/">
-                    windows平台安装MongoDB
+                <a href="/2018/10/03/手把手搭建Guacamole教程/">
+                    手把手搭建Guacamole教程
                 </a>
             </div>
         
@@ -386,7 +387,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shell"><span class="toc-number">1.</span> <span class="toc-text">shell</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#echo-e-转义序列的字符串"><span class="toc-number">1.1.1.</span> <span class="toc-text">echo -e  +  转义序列的字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常识"><span class="toc-number">1.1.2.</span> <span class="toc-text">常识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算"><span class="toc-number">1.1.3.</span> <span class="toc-text">运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#let"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">let</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bc"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">bc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置时间"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">设置时间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">1.1.4.</span> <span class="toc-text">循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if"><span class="toc-number">1.1.5.</span> <span class="toc-text">if</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#完全备份"><span class="toc-number">1.</span> <span class="toc-text">完全备份</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#开启二进制"><span class="toc-number">1.1.</span> <span class="toc-text">开启二进制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#备份数据"><span class="toc-number">1.2.</span> <span class="toc-text">备份数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#还原数据库"><span class="toc-number">2.</span> <span class="toc-text">还原数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法一：使用2018-06-11-15-30-47还原"><span class="toc-number">2.1.</span> <span class="toc-text">方法一：使用2018-06-11_15-30-47还原</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法二：使用2018-06-11-tar还原"><span class="toc-number">2.2.</span> <span class="toc-text">方法二：使用2018-06-11.tar还原</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题："><span class="toc-number">3.</span> <span class="toc-text">问题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#知识点"><span class="toc-number">4.</span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一，"><span class="toc-number">4.1.</span> <span class="toc-text">一，</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二，"><span class="toc-number">4.2.</span> <span class="toc-text">二，</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -422,7 +423,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Shell　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Mysql备份，还原　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -444,7 +445,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/12/30/Docker常用操作命令/" title="上一篇: Docker常用操作命令">
+            <a href="/2018/10/03/zabbix搭建/" title="上一篇: zabbix搭建">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -452,7 +453,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/12/28/windows平台安装MongoDB/" title="下一篇: windows平台安装MongoDB">
+            <a href="/2018/10/03/手把手搭建Guacamole教程/" title="下一篇: 手把手搭建Guacamole教程">
                 <i class="fa fa-angle-right"></i>
             </a>
         

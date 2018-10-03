@@ -198,7 +198,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">-Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维/">运维</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">-Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/监控/">监控</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维/">运维</a></li></ul>
                     </div>
                 </section>
                 
@@ -278,6 +278,265 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-zabbix-添加主机" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/03/zabbix-添加主机/" class="article-date">
+      <time datetime="2018-10-03T09:05:42.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/03/zabbix-添加主机/">zabbix-添加主机</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="client安装"><a href="#client安装" class="headerlink" title="client安装"></a>client安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">wget http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/zabbix-release-3.2-1.el7.noarch.rpm</span><br><span class="line">rpm -ivh  zabbix-release-3.2-1.el7.noarch.rpm</span><br><span class="line">yum install -y zabbix-agent</span><br><span class="line">vim /etc/zabbix/zabbix_agented.conf</span><br><span class="line">Server=服务端IP(被动模式)</span><br><span class="line">ServerActive=服务端IP（主动模式）</span><br><span class="line">Hostname=wzs1 #客户端名字在服务端设置的主机名（与web界面一样）</span><br><span class="line">systemctl start zabbix-agent</span><br><span class="line">systemctl enable zabbix-agent</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">ps aux|grep zabbix</span><br><span class="line">netstat -lntp</span><br><span class="line">zabbix-server和zabbix-client，都要关闭firewalld和selinux</span><br></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2018/10/03/zabbix-添加主机/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-zabbix修改-忘记密码" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/03/zabbix修改-忘记密码/" class="article-date">
+      <time datetime="2018-10-03T09:04:42.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/03/zabbix修改-忘记密码/">zabbix修改/忘记密码</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><blockquote>
+<p>点击  Administration -&gt; Users -&gt; Admin -&gt; Password<br>再修改密码：cnhope<br>修改中文<br>Administration -&gt; Users -&gt; Admin -&gt;Language<br>选：Chinese(zh_CN)<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/监控/">监控</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/10/03/zabbix修改-忘记密码/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-zabbix搭建" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/03/zabbix搭建/" class="article-date">
+      <time datetime="2018-10-03T09:03:21.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/03/zabbix搭建/">zabbix搭建</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="初始zabbix"><a href="#初始zabbix" class="headerlink" title="初始zabbix"></a>初始zabbix</h2><blockquote>
+<p><strong>常见监控软件</strong><br>cacti,nagios,zabbix,smokeping,open-falcon等<br>cacti,nagios,zabbix 服务端监控中心，需要PHP环境支持。<br>zabbix和cacti需要mysql作为数据存储，可以用数据成图<br>nagios不用存储历史数据注重服务或者监控项的状态，成图需要插件<br>zabbix会获取服务或者监控项目的数据，会把数据记录到数据库里，从而可以成图</p>
+</blockquote>
+<blockquote>
+<p>c/s架构，基于c++开发，监控中心支持web界面配置和管理<br>Zabbix-server 监控中心，接收客户端上报信息，负责配置，统计，操作数据，数据存储，存放数据<br>可在web界面，操作配置zabbix<br>zabbix-proxy（可选组件）：代替zabbix-server的功能，减轻server的压力<br>zabbix-agent客户端软件，负责采集各个监控服务或项目的数据，并上报</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-f7283fd3acf307df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="zabbix流程图"><br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/监控/">监控</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/10/03/zabbix搭建/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Mysql备份，还原" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/03/Mysql备份，还原/" class="article-date">
+      <time datetime="2018-10-03T09:01:21.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/03/Mysql备份，还原/">Mysql备份，还原</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="完全备份"><a href="#完全备份" class="headerlink" title="完全备份"></a>完全备份</h3><h4 id="开启二进制"><a href="#开启二进制" class="headerlink" title="开启二进制"></a>开启二进制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/my.cnf.d/server.cnf</span><br><span class="line">[mysqld]</span><br><span class="line">datadir=/var/lib/mysql  \\数据库默认路径</span><br><span class="line">log_bin=mysql-bin  #日志文件名称，末指定则按日期命名</span><br><span class="line">binlog_format=row</span><br><span class="line">service mysql restart</span><br><span class="line">否则没有xtrabackup_binlog_info文件</span><br></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/10/03/Mysql备份，还原/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-手把手搭建Guacamole教程" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -710,272 +969,9 @@
 
 
   
-    <article id="post-zabbix3-0安装" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/01/19/zabbix3-0安装/" class="article-date">
-      <time datetime="2018-01-19T06:07:17.000Z" itemprop="datePublished">2018-01-19</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/19/zabbix3-0安装/">zabbix3.0安装</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h3 id="本实验软件版本"><a href="#本实验软件版本" class="headerlink" title="本实验软件版本:"></a>本实验软件版本:</h3><pre><code>* Cenos6.8，Nginx:1.9.15 , MySQL:5.5.49 , PHP:5.5.35，zabbix3.0.12
-</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>搭建Zabbix前提需要有LAMP/LNMP环境，本文也将列出其详细安装步骤<br>开始搭建之前，将Nginx:1.9.15 , MySQL:5.5.49 , PHP:5.5.35，zabbix3.0.12几个软件包下载下来，并放到系统中</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zabbix/">zabbix</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/01/19/zabbix3-0安装/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-LVS-nat群集" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/01/02/LVS-nat群集/" class="article-date">
-      <time datetime="2018-01-02T06:52:28.000Z" itemprop="datePublished">2018-01-02</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/02/LVS-nat群集/">LVS+nat群集</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>##环境<br><img src="https://static.oschina.net/uploads/img/201805/01110050_fQeV.png" alt="输入图片说明" title="在这里输入图片标题"></p>
-<blockquote>
-<p>如图所示<br>lvs-server：两块网卡（nat和VM1）<br>web1和web2（网卡VM1 要配置网关 192.168.1.1）<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">-Linux</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/01/02/LVS-nat群集/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-python一行命令搭建ftp" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/30/python一行命令搭建ftp/" class="article-date">
-      <time datetime="2017-12-30T14:26:21.000Z" itemprop="datePublished">2017-12-30</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/30/python一行命令搭建ftp/">python一行命令搭建ftp</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="环境：python2-7"><a href="#环境：python2-7" class="headerlink" title="环境：python2.7"></a>环境：python2.7</h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyftpdlib</span><br></pre></td></tr></table></figure>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/12/30/python一行命令搭建ftp/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-windows安装python" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/30/windows安装python/" class="article-date">
-      <time datetime="2017-12-30T13:42:53.000Z" itemprop="datePublished">2017-12-30</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/30/windows安装python/">windows安装python</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="下载python"><a href="#下载python" class="headerlink" title="下载python"></a>下载python</h2><blockquote>
-<p><a href="http://www.python.org" target="_blank" rel="noopener">www.python.org</a> –&gt; Downloads–&gt;Windons 64位<br>下载后直接安装</p>
-</blockquote>
-<ul>
-<li><strong>注意</strong>：在Customize Python2.7.11(64-bit)<br><img src="https://static.oschina.net/uploads/img/201805/01112958_6Od0.png" alt="输入图片说明" title="在这里输入图片标题"><br><strong>其他直接next</strong>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/12/30/windows安装python/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
