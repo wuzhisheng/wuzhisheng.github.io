@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="吴志盛" />
+
+
+
+<meta name="description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
+<meta name="keywords" content="shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shell">
+<meta property="og:url" content="http://blog.520jd.me/2017/12/29/Shell/index.html">
+<meta property="og:site_name" content="个人博客|吴志盛">
+<meta property="og:description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1510727980770.png">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/2.png">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
+<meta property="og:image" content="http://blog.520jd.me/2017/12/29/Shell/1.png">
+<meta property="og:updated_time" content="2017-12-29T15:22:10.371Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shell">
+<meta name="twitter:description" content="shell环境变量echo -e  +  转义序列的字符串123456echo -e &amp;quot;1\t2\t3&amp;quot;1 2 3[root@localhost ~]# echo -e &amp;quot;\e[31m This is red text&amp;quot;   字体设置为红色echo -e &amp;quot;\e[1;42m Green Background &amp;quot;">
+<meta name="twitter:image" content="http://blog.520jd.me/2017/12/29/Shell/1510727980770.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="个人博客|吴志盛" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/IMG_7259.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Shell | 个人博客|吴志盛</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56ff76c972fc0cf9"></script>
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">吴志盛</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">知识的广度是深度的副产品</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:80615829@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/wuzhisheng" title="GitHub"></a>
+                            
+                                <a class="fa 简书" href="https://www.jianshu.com/users/71ca683d7238/timeline" title="简书"></a>
+                            
+                                <a class="fa CSDN" href="https://my.oschina.net/wuzsheng" title="CSDN"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">-Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">-zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/监控/">监控</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维/">运维</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hkj123.cn/">我大哥</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/kangvcar">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">吴志盛</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">吴志盛</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">知识的广度是深度的副产品</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:80615829@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/wuzhisheng" title="GitHub"></a>
+                            
+                                <a class="fa 简书" target="_blank" href="https://www.jianshu.com/users/71ca683d7238/timeline" title="简书"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="https://my.oschina.net/wuzsheng" title="CSDN"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-Shell" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/29/Shell/" class="article-date">
+      <time datetime="2017-12-29T15:17:22.000Z" itemprop="datePublished">2017-12-29</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Shell
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h1><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><h3 id="echo-e-转义序列的字符串"><a href="#echo-e-转义序列的字符串" class="headerlink" title="echo -e  +  转义序列的字符串"></a>echo -e  +  转义序列的字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">echo -e &quot;1\t2\t3&quot;</span><br><span class="line">1 2 3</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo -e &quot;\e[31m This is red text&quot;   字体设置为红色</span><br><span class="line"></span><br><span class="line">echo -e &quot;\e[1;42m Green Background &quot;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<blockquote>
+<p><strong>字体</strong><br>重置=0，黑色=30，红色=31，绿色=32，黄色=33，蓝<br>色=34，洋红=35，青色=36，白色=37。<br><strong>背景颜色</strong><br>重置=0，黑色=40，红色=41，绿色=42，黄色=43，<br>蓝色=44，洋红=45，青色=46，白色=47</p>
+</blockquote>
+<h3 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# len=123456789</span><br><span class="line">[root@localhost ~]# echo $len</span><br><span class="line">123456789</span><br><span class="line">[root@localhost ~]# echo $&#123;len&#125;</span><br><span class="line">123456789</span><br><span class="line"></span><br><span class="line">显示当前环境变量</span><br><span class="line">[root@localhost ~]# echo $SHELL </span><br><span class="line">/bin/bash</span><br><span class="line">[root@localhost ~]# echo $0</span><br><span class="line">-bash</span><br><span class="line"></span><br><span class="line">计算长度</span><br><span class="line">[root@localhost ~]# len=123456789</span><br><span class="line">[root@localhost ~]# echo $&#123;#len&#125;</span><br><span class="line">9</span><br><span class="line"></span><br><span class="line">检查是否为超级用户</span><br><span class="line">[root@localhost ~]# echo $UID</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# let wu=4+2</span><br><span class="line">6</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# let wu+=6</span><br><span class="line">[root@localhost ~]# echo $wu</span><br><span class="line">12</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# let wu++</span><br><span class="line">[root@localhost ~]# echo $wu</span><br><span class="line">13</span><br><span class="line"></span><br><span class="line">13</span><br><span class="line">[root@localhost ~]# zhi=$[7+5]</span><br><span class="line">[root@localhost ~]# echo $zhi</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+<h4 id="bc"><a href="#bc" class="headerlink" title="bc"></a>bc</h4><p><strong>执行浮点数运算并应用一些高级函数</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# echo &quot;4 * 0.56&quot; | bc</span><br><span class="line">2.24</span><br><span class="line"></span><br><span class="line">scale=2将小数位个数设置为2</span><br><span class="line">[root@localhost ~]# echo &quot;scale=2;3/8&quot;|bc</span><br><span class="line">0.37</span><br><span class="line"></span><br><span class="line">obase=2 转化为二进制</span><br><span class="line">[root@localhost ~]# echo &quot;obase=2;100&quot;|bc</span><br><span class="line">1100100</span><br><span class="line"></span><br><span class="line">平方根</span><br><span class="line">[root@localhost ~]# echo &quot;sqrt(100)&quot; | bc </span><br><span class="line">10</span><br><span class="line"></span><br><span class="line">平方</span><br><span class="line">[root@localhost ~]# echo &quot;5^2&quot; | bc           </span><br><span class="line">25</span><br></pre></td></tr></table></figure></p>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# array=(1 2 3 4 5 6)</span><br><span class="line">[root@localhost ~]# echo $&#123;#array[*]&#125;</span><br><span class="line">6</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo $&#123;array[0]&#125;</span><br><span class="line">1</span><br><span class="line">[root@localhost ~]# echo $&#123;array[1]&#125;</span><br><span class="line">2</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# echo $&#123;array[0]&#125;</span><br><span class="line">wu</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# sz=([name]=&apos;wu&apos; [age]=18)</span><br><span class="line">[root@localhost ~]# echo $&#123;sz=[age]&#125;</span><br><span class="line">18</span><br></pre></td></tr></table></figure>
+<h4 id="设置时间"><a href="#设置时间" class="headerlink" title="设置时间"></a>设置时间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# date</span><br><span class="line">Wed Nov 15 01:33:40 EST 2017</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# date &quot;+%Y %b %d %H %M %S&quot;</span><br><span class="line">2017 Nov 15 14 40 36</span><br><span class="line"></span><br><span class="line">修改时间</span><br><span class="line">[root@localhost ~]# date -s &quot;21 June 2008 11:01:22&quot;</span><br><span class="line">Sat Jun 21 11:01:22 EDT 2008 </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# date -s &quot;15 November 2017 14:35:22&quot;</span><br><span class="line">Wed Nov 15 14:35:22 EST 2017</span><br></pre></td></tr></table></figure>
+<p><img src="./1510727980770.png" alt="Alt text"></p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><img src="./1.png" alt="Alt text"><br><img src="./2.png" alt="Alt text"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost dir]# cat file </span><br><span class="line">#!/bin/bash</span><br><span class="line">x=0</span><br><span class="line">until [ $x -eq 9 ];</span><br><span class="line">do</span><br><span class="line">let x++;echo $x;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
+<h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><p><img src="./1.png" alt="Alt text"><br><img src="./1.png" alt="Alt text"></p>
+<blockquote>
+<p>&amp;&amp; 和   || 或</p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/12/29/Shell/">Shell</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
+        <p><span>发布时间:</span>2017-12-29, 23:17:22</p>
+        <p><span>最后更新:</span>2017-12-29, 23:22:10</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/29/Shell/" title="Shell">http://blog.520jd.me/2017/12/29/Shell/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2017/12/29/Shell/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/12/30/Docker常用操作命令/">
+                    Docker常用操作命令
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/12/28/windows平台安装MongoDB/">
+                    windows平台安装MongoDB
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shell"><span class="toc-number">1.</span> <span class="toc-text">shell</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#echo-e-转义序列的字符串"><span class="toc-number">1.1.1.</span> <span class="toc-text">echo -e  +  转义序列的字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常识"><span class="toc-number">1.1.2.</span> <span class="toc-text">常识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算"><span class="toc-number">1.1.3.</span> <span class="toc-text">运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#let"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">let</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bc"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">bc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置时间"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">设置时间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">1.1.4.</span> <span class="toc-text">循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if"><span class="toc-number">1.1.5.</span> <span class="toc-text">if</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Shell　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+        <div class="addthis_sharing_toolbox"></div>
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/12/30/Docker常用操作命令/" title="上一篇: Docker常用操作命令">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/12/28/windows平台安装MongoDB/" title="下一篇: windows平台安装MongoDB">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/zabbix-添加主机/">zabbix-添加主机</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/zabbix修改-忘记密码/">zabbix修改/忘记密码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/zabbix搭建/">zabbix搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/Mysql备份，还原/">Mysql备份，还原</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/手把手搭建Guacamole教程/">手把手搭建Guacamole教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/pssh批量处理/">pssh批量处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/01/松松入门MySQL/">松松入门MySQL</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/01/各种姿势安装MongoDB/">各种姿势安装MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/分分钟进阶MongoDB/">分分钟进阶MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/18/手把手教你安装Arhlinux/">手把手教你安装Archlinux</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/19/zabbix3-0安装/">zabbix3.0安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/02/LVS-nat群集/">LVS+nat群集</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/python一行命令搭建ftp/">python一行命令搭建ftp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/windows安装python/">windows安装python</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/DHCP服务/">DHCP服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/DNS主从服务/">DNS主从服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/Centos7-DNS服务/">Centos7  DNS服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/用iso镜像配置本地yum源/">用iso镜像配置本地yum源</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/Docker常用操作命令/">Docker常用操作命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/29/Shell/">Shell</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/28/windows平台安装MongoDB/">windows平台安装MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/24/Centos上MongDB安装，卸载/">Centos上MongDB安装，卸载</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017-2018 吴志盛
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
