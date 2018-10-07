@@ -35,7 +35,22 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-541e768abaf9cdf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-bbaa377f8a07844a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-c8dec39ba7124d38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-10-07T08:13:33.672Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-331cd89fce3d4d94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-57fdc99c0b98db88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-932dc740f0648803.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-08fc078e5538db4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-0463fcc0e093a19f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-7231792820244bca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-49c607449e290fba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-7226a59565570c7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-5442ca1e7adb058f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-cce739f2844242de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-f44533845e5279bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-4dbc175ea689b7a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-bc00bdc7c11177d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-1454faffcb3d30ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-b1c741ba7e7df13f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-07T08:15:27.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell入门">
 <meta name="twitter:description" content="变量变量 变量引用：\$  和 ${}  命令替换 命令输出中提取信息，并将其赋给变量反引号 和   $() wu=`命令`   或者  wu =$()   注意： 和 $() 与= 不能有空格">
@@ -386,6 +401,65 @@
 <p>双方括号：针对字符串比较的高级特性<br>采用的标准字符串比较，具有模式匹配</p>
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/8735579-c8dec39ba7124d38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><h3 id="case"><a href="#case" class="headerlink" title="case"></a>case</h3><blockquote>
+<p>变量和模式是匹配的<br>通过竖线操作符在一行中分隔出多个模式模式:Y|y<br>* 会捕获所有与已知模式不匹配的值</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-331cd89fce3d4d94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="shift-移动变量"><a href="#shift-移动变量" class="headerlink" title="shift 移动变量"></a>shift 移动变量</h4><blockquote>
+<p>操作命令行参数<br>根据它们的相对位置来移动命令行参数<br>默认情况下它会将每个参数变量向左移动一个位置<br>即变量$3的值会移到$2中，变量$2的值会移到$1中，而变量$1的值则会被删除</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">echo &quot;The original:$*&quot;</span><br><span class="line">shift 2	#移动两个位置</span><br><span class="line">echo &quot;The position $1&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-57fdc99c0b98db88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="双破折线"><a href="#双破折线" class="headerlink" title="双破折线"></a>双破折线</h4><blockquote>
+<p>双破折线表示选项列表结束。在双破折线之后脚本就可以放心地将剩下的命令行参数当作参数，而不是选项来处理了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">while [ -n &quot;$1&quot; ]</span><br><span class="line">do</span><br><span class="line">        case &quot;$1&quot; in</span><br><span class="line">                -a) echo &quot;Found the -a option&quot; ;;</span><br><span class="line">                -b) echo &quot;Found the -b option&quot;;;</span><br><span class="line">                -c) echo &quot;Found the -c option&quot; ;;</span><br><span class="line">                --) shift</span><br><span class="line">                break ;;</span><br><span class="line">                *) echo &quot;$1 is not an option&quot;;;</span><br><span class="line">        esac</span><br><span class="line">shift</span><br><span class="line">done</span><br><span class="line">#</span><br><span class="line">count=1</span><br><span class="line">for param in $@</span><br><span class="line">do</span><br><span class="line">        echo &quot;Parameter #$count: $param&quot;</span><br><span class="line">        count=$[ $count + 1 ]</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-932dc740f0648803.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">while [ -n &quot;$1&quot; ]</span><br><span class="line">do</span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">a) echo &quot;print a&quot;;;</span><br><span class="line">b) echo &quot;print b&quot;;;</span><br><span class="line">--) shift</span><br><span class="line">    break;;</span><br><span class="line">*) echo &quot;$1 is not an option&quot;;;</span><br><span class="line">esac</span><br><span class="line">shift</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">count=1</span><br><span class="line">for param in $@</span><br><span class="line">do</span><br><span class="line">echo &quot;param #$count: $param&quot;</span><br><span class="line">count=$[ $count + 1 ]</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-08fc078e5538db4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>在遇到双破折线时，脚本用break命令来跳出while循环。由于过早地跳出了循环，我们需<br>要再加一条shift命令来将双破折线移出参数变量</p>
+</blockquote>
+<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><blockquote>
+<p>for  var  in  list(遍历自身定义一系列值)<br>do<br>commands<br>done</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-0463fcc0e093a19f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-7231792820244bca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="处理循环的输出"><a href="#处理循环的输出" class="headerlink" title="处理循环的输出"></a>处理循环的输出</h4><p>#!/bin/bash<br> for (( a=1;a&lt;10;a++ ))<br> do<br>   echo “The number is $a”<br> done &gt; wu.txt<br>对循环的输出使用管道或进行重定向到文件中</p>
+<h4 id="更改字段分隔符"><a href="#更改字段分隔符" class="headerlink" title="更改字段分隔符"></a>更改字段分隔符</h4><blockquote>
+<p>bash shell默认<br>空格<br>制表符<br>换行符<br>为分隔符<br>IF=\$ 可以制定分隔符<br>IF=\ $’\n’ ,只有\n为分隔符</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-49c607449e290fba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="c语言for"><a href="#c语言for" class="headerlink" title="c语言for"></a>c语言for</h4><blockquote>
+<p>for (( i = 1; i &lt;= 10; i++ ))<br>do<br>command<br>done</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-7226a59565570c7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><blockquote>
+<p>while command</p>
+</blockquote>
+<h4 id="设置单个命令"><a href="#设置单个命令" class="headerlink" title="设置单个命令"></a>设置单个命令</h4><blockquote>
+<p>只要测试条件成立， while命令就会不停地循环执行定义好的命令<br>测试条件中用到的变量必须修改，否则就会陷入无限循环</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-5442ca1e7adb058f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="设置多个命令"><a href="#设置多个命令" class="headerlink" title="设置多个命令"></a>设置多个命令</h4><blockquote>
+<p>只有最后一个测试命令的退出状态码会被用来决定什么时候结束循环</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-cce739f2844242de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="until"><a href="#until" class="headerlink" title="until"></a>until</h3><blockquote>
+<p>untile test commands<br>do<br>other commands<br>done</p>
+<p>until条件成立则不执行，条件不成立则执行与  while 相反</p>
+</blockquote>
+<h4 id="设置单个命令-1"><a href="#设置单个命令-1" class="headerlink" title="设置单个命令"></a>设置单个命令</h4><p><img src="https://upload-images.jianshu.io/upload_images/8735579-f44533845e5279bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="设置多个命令-1"><a href="#设置多个命令-1" class="headerlink" title="设置多个命令"></a>设置多个命令</h4><p><img src="https://upload-images.jianshu.io/upload_images/8735579-4dbc175ea689b7a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="控制循环"><a href="#控制循环" class="headerlink" title="控制循环"></a>控制循环</h3><h4 id="break"><a href="#break" class="headerlink" title="break"></a>break</h4><blockquote>
+<p>退出任意类型的循环<br>跳出当前正在执行的循环，完全终止整个循环</p>
+<p>break n<br>n指定了要跳出的循环层级</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-bc00bdc7c11177d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h4><blockquote>
+<p>continue命令可以提前中止某次循环中的命令但并不会完全终止整个循环。<br>跳过此次循环中剩余的命令，但整个循环还会继续。<br>可以在循环内部设置shell不执行命令的条件。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-1454faffcb3d30ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="continue-n"><a href="#continue-n" class="headerlink" title="continue n"></a>continue n</h4><p><img src="https://upload-images.jianshu.io/upload_images/8735579-b1c741ba7e7df13f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 
       
     </div>
@@ -397,7 +471,7 @@
         <p><span>本文标题:</span><a href="/2018/10/06/Shell入门/">Shell入门</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
         <p><span>发布时间:</span>2018-10-06, 18:20:44</p>
-        <p><span>最后更新:</span>2018-10-07, 16:13:33</p>
+        <p><span>最后更新:</span>2018-10-07, 16:15:27</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/10/06/Shell入门/" title="Shell入门">http://blog.520jd.me/2018/10/06/Shell入门/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/06/Shell入门/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -427,7 +501,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">1.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#变量-1"><span class="toc-number">1.1.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令替换"><span class="toc-number">1.2.</span> <span class="toc-text">命令替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#echo-读取-read"><span class="toc-number">1.3.</span> <span class="toc-text">echo/读取:read</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标准输入输出"><span class="toc-number">1.4.</span> <span class="toc-text">标准输入输出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">2.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#expr"><span class="toc-number">2.1.</span> <span class="toc-text">expr</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#整数运算"><span class="toc-number">2.2.</span> <span class="toc-text">整数运算$[ ]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浮点运算-bc"><span class="toc-number">2.3.</span> <span class="toc-text">浮点运算 bc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#if结构化语句"><span class="toc-number">3.</span> <span class="toc-text">if结构化语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数值比较"><span class="toc-number">3.1.</span> <span class="toc-text">数值比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串比较"><span class="toc-number">3.2.</span> <span class="toc-text">字符串比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件比较"><span class="toc-number">3.3.</span> <span class="toc-text">文件比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复合条件测试"><span class="toc-number">3.4.</span> <span class="toc-text">复合条件测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用于数学表达式的双括号"><span class="toc-number">3.5.</span> <span class="toc-text">用于数学表达式的双括号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用于高级字符串处理功能的双方括号"><span class="toc-number">3.6.</span> <span class="toc-text">用于高级字符串处理功能的双方括号</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">1.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#变量-1"><span class="toc-number">1.1.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令替换"><span class="toc-number">1.2.</span> <span class="toc-text">命令替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#echo-读取-read"><span class="toc-number">1.3.</span> <span class="toc-text">echo/读取:read</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标准输入输出"><span class="toc-number">1.4.</span> <span class="toc-text">标准输入输出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">2.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#expr"><span class="toc-number">2.1.</span> <span class="toc-text">expr</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#整数运算"><span class="toc-number">2.2.</span> <span class="toc-text">整数运算$[ ]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浮点运算-bc"><span class="toc-number">2.3.</span> <span class="toc-text">浮点运算 bc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#if结构化语句"><span class="toc-number">3.</span> <span class="toc-text">if结构化语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数值比较"><span class="toc-number">3.1.</span> <span class="toc-text">数值比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串比较"><span class="toc-number">3.2.</span> <span class="toc-text">字符串比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件比较"><span class="toc-number">3.3.</span> <span class="toc-text">文件比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复合条件测试"><span class="toc-number">3.4.</span> <span class="toc-text">复合条件测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用于数学表达式的双括号"><span class="toc-number">3.5.</span> <span class="toc-text">用于数学表达式的双括号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用于高级字符串处理功能的双方括号"><span class="toc-number">3.6.</span> <span class="toc-text">用于高级字符串处理功能的双方括号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构"><span class="toc-number">4.</span> <span class="toc-text">结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#case"><span class="toc-number">4.1.</span> <span class="toc-text">case</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#shift-移动变量"><span class="toc-number">4.1.1.</span> <span class="toc-text">shift 移动变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#双破折线"><span class="toc-number">4.1.2.</span> <span class="toc-text">双破折线</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for"><span class="toc-number">4.2.</span> <span class="toc-text">for</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#处理循环的输出"><span class="toc-number">4.2.1.</span> <span class="toc-text">处理循环的输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更改字段分隔符"><span class="toc-number">4.2.2.</span> <span class="toc-text">更改字段分隔符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#c语言for"><span class="toc-number">4.2.3.</span> <span class="toc-text">c语言for</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#while"><span class="toc-number">4.3.</span> <span class="toc-text">while</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置单个命令"><span class="toc-number">4.3.1.</span> <span class="toc-text">设置单个命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置多个命令"><span class="toc-number">4.3.2.</span> <span class="toc-text">设置多个命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#until"><span class="toc-number">4.4.</span> <span class="toc-text">until</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置单个命令-1"><span class="toc-number">4.4.1.</span> <span class="toc-text">设置单个命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置多个命令-1"><span class="toc-number">4.4.2.</span> <span class="toc-text">设置多个命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#控制循环"><span class="toc-number">4.5.</span> <span class="toc-text">控制循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#break"><span class="toc-number">4.5.1.</span> <span class="toc-text">break</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#continue"><span class="toc-number">4.5.2.</span> <span class="toc-text">continue</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#continue-n"><span class="toc-number">4.5.3.</span> <span class="toc-text">continue n</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
