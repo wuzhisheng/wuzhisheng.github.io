@@ -198,7 +198,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">-Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">-zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/监控/">监控</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维/">运维</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">-Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">-shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">-zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/监控/">监控</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维/">运维</a></li></ul>
                     </div>
                 </section>
                 
@@ -278,6 +278,82 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Shell入门" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/06/Shell入门/" class="article-date">
+      <time datetime="2018-10-06T10:20:44.000Z" itemprop="datePublished">2018-10-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/06/Shell入门/">Shell入门</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="变量-1"><a href="#变量-1" class="headerlink" title="变量"></a>变量</h3><blockquote>
+<p>变量引用：\$  和 ${}</p>
+</blockquote>
+<h3 id="命令替换"><a href="#命令替换" class="headerlink" title="命令替换"></a>命令替换</h3><blockquote>
+<p>命令输出中提取信息，并将其赋给变量<br>反引号 和   $()</p>
+<p>wu=`命令`   或者  wu =$()  </p>
+<p>注意：<code></code> 和 $() 与= 不能有空格</p>
+</blockquote>
+<h3 id="echo-读取-read"><a href="#echo-读取-read" class="headerlink" title="echo/读取:read"></a>echo/读取:read</h3><blockquote>
+<p>echo命令可用单引号或双引号来划定文本字符串，便可以正常输出。<br>echo -n :文本字符串和命令输出显示在同一行中</p>
+<p>read -p “Enter your age:” name<br>echo “hello $name”</p>
+<p>read –p 相当于 echo -n 提示作用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">read -p &quot;Enter your name: &quot; first last</span><br><span class="line">echo &quot;Checking data for $last, $first…&quot;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-3df86a308724f3b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-t 指定时间</span><br><span class="line">-s 隐藏输入内容（可用于输入密码）</span><br><span class="line"></span><br><span class="line">read 文件内容</span><br><span class="line">count=1</span><br><span class="line">cat test | while read line</span><br><span class="line">do</span><br><span class="line">  echo &quot;Line $count: $line&quot;</span><br><span class="line">  count=$[ $count + 1 ]</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-78c2e1b47b332028.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="标准输入输出"><a href="#标准输入输出" class="headerlink" title="标准输入输出"></a>标准输入输出</h3><p><img src="https://upload-images.jianshu.io/upload_images/8735579-4214f4dd07aeeed8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -la t test3 test4 2&gt;text1 1&gt;text</span><br><span class="line">&amp;&gt;test 则正确和错误输入到同一个文件</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-ebc8162b29dcd2e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">-shell</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-zabbix-添加主机" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -879,82 +955,6 @@
       
         <p class="article-more-link">
           <a href="/2018/04/29/分分钟进阶MongoDB/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-手把手教你安装Arhlinux" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/02/18/手把手教你安装Arhlinux/" class="article-date">
-      <time datetime="2018-02-18T11:35:20.000Z" itemprop="datePublished">2018-02-18</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/18/手把手教你安装Arhlinux/">手把手教你安装Archlinux</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="Archlinux概述"><a href="#Archlinux概述" class="headerlink" title="Archlinux概述"></a>Archlinux概述</h2><blockquote>
-<p>Arch Linux是致力于使用简单、系统轻量、软件更新速度快的Linux发行版</p>
-<p><strong>优势</strong><br>Arch Wiki 非常丰富，就是我们遇到问题时解决的利器</p>
-<ul>
-<li>Arch 采用滚动更新的方式，因此你不用再考虑以后升级系统需要重装的问题</li>
-<li>Arch 的 pacman 是非常简单高效的包管理工具</li>
-<li>Arch 的 AUR 仓库包含大量软件包，只需一个 makepkg 命令即可构建，非常方</li>
-</ul>
-</blockquote>
-<h2 id="下载Archliunx-iso"><a href="#下载Archliunx-iso" class="headerlink" title="下载Archliunx iso"></a>下载Archliunx iso</h2><blockquote>
-<p><a href="https://www.archlinux.org/download/" target="_blank" rel="noopener">Archlinux iso 链接</a><br>在该页面，找到China区域，下载</p>
-</blockquote>
-<p><img src="https://static.oschina.net/uploads/img/201805/01104046_A16s.png" alt="输入图片说明" title="在这里输入图片标题"><br><img src="https://static.oschina.net/uploads/img/201805/01104050_YlfG.png" alt="输入图片说明" title="在这里输入图片标题"><br><img src="https://static.oschina.net/uploads/img/201805/01104059_UQk5.png" alt="输入图片说明" title="在这里输入图片标题"></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/02/18/手把手教你安装Arhlinux/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
