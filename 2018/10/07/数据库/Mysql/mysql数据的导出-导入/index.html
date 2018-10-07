@@ -15,20 +15,18 @@
 
 
 
-<meta name="description" content="用iso镜像配置本地yum源在虚拟机安装iso 镜像挂载">
-<meta name="keywords" content="linux">
+<meta name="description" content="基本思路：使用select语句导出要迁移的数据到文件。然后再使用load data语句把文件中的数据导入到数据库中。  创建目录并授权123mkdir -p /data/qianyichown -R mysql:mysql /data/主和属组务必要添加mysql，否则select 语句写不进去数据">
+<meta name="keywords" content="-Mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用iso镜像配置本地yum源">
-<meta property="og:url" content="http://blog.520jd.me/2017/12/30/用iso镜像配置本地yum源/index.html">
+<meta property="og:title" content="数据的导出&#x2F;导入">
+<meta property="og:url" content="http://blog.520jd.me/2018/10/07/数据库/Mysql/mysql数据的导出-导入/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
-<meta property="og:description" content="用iso镜像配置本地yum源在虚拟机安装iso 镜像挂载">
+<meta property="og:description" content="基本思路：使用select语句导出要迁移的数据到文件。然后再使用load data语句把文件中的数据导入到数据库中。  创建目录并授权123mkdir -p /data/qianyichown -R mysql:mysql /data/主和属组务必要添加mysql，否则select 语句写不进去数据">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://static.oschina.net/uploads/img/201712/30160146_gfYj.png">
-<meta property="og:updated_time" content="2017-12-30T08:05:57.994Z">
+<meta property="og:updated_time" content="2018-10-07T08:58:15.826Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用iso镜像配置本地yum源">
-<meta name="twitter:description" content="用iso镜像配置本地yum源在虚拟机安装iso 镜像挂载">
-<meta name="twitter:image" content="https://static.oschina.net/uploads/img/201712/30160146_gfYj.png">
+<meta name="twitter:title" content="数据的导出&#x2F;导入">
+<meta name="twitter:description" content="基本思路：使用select语句导出要迁移的数据到文件。然后再使用load data语句把文件中的数据导入到数据库中。  创建目录并授权123mkdir -p /data/qianyichown -R mysql:mysql /data/主和属组务必要添加mysql，否则select 语句写不进去数据">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -60,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>用iso镜像配置本地yum源 | 个人博客|吴志盛</title>
+<title>数据的导出/导入 | 个人博客|吴志盛</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -279,11 +277,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-用iso镜像配置本地yum源" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-数据库/Mysql/mysql数据的导出-导入" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/12/30/用iso镜像配置本地yum源/" class="article-date">
-      <time datetime="2017-12-30T08:03:14.000Z" itemprop="datePublished">2017-12-30</time>
+      <a href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/" class="article-date">
+      <time datetime="2018-10-07T08:54:01.000Z" itemprop="datePublished">2018-10-07</time>
 </a>
 
 
@@ -298,7 +296,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      用iso镜像配置本地yum源
+      数据的导出/导入
     </h1>
   
 
@@ -309,7 +307,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">-Mysql</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -319,14 +317,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="用iso镜像配置本地yum源"><a href="#用iso镜像配置本地yum源" class="headerlink" title="用iso镜像配置本地yum源"></a>用iso镜像配置本地yum源</h2><h3 id="在虚拟机安装iso"><a href="#在虚拟机安装iso" class="headerlink" title="在虚拟机安装iso"></a>在虚拟机安装iso</h3><p><img src="https://static.oschina.net/uploads/img/201712/30160146_gfYj.png" alt="输入图片说明"></p>
-<h3 id="镜像挂载"><a href="#镜像挂载" class="headerlink" title="镜像挂载"></a>镜像挂载</h3><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mkdir /centos</span><br><span class="line"></span><br><span class="line">mount /dev/cdrom /centos</span><br><span class="line">或者</span><br><span class="line">mount -t iso9660 /dev/sro /centos</span><br><span class="line"></span><br><span class="line">echo &quot;/dev/sr0 /centos iso9660 defaults，ro 0 0&quot;&gt;&gt;/etc/fstab</span><br><span class="line">或者</span><br><span class="line">echo &quot;/dev/cdrom /centos iso9660 defaults 0 0&quot; &gt;&gt; /etc/fstab</span><br></pre></td></tr></table></figure>
-<ul>
-<li>/dev/cdrom 是/dev/sr0 链接</li>
-</ul>
-<h3 id="创建yum源"><a href="#创建yum源" class="headerlink" title="创建yum源"></a>创建yum源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d</span><br><span class="line">mv * /tmp 将原来的yum源移走</span><br><span class="line"></span><br><span class="line">vim systme.repo  必须以repo结尾</span><br><span class="line">[system]</span><br><span class="line">name=system</span><br><span class="line">baseurl=file:///centos</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck= 0  0表示不用检查</span><br></pre></td></tr></table></figure>
-<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum clean all 清除缓存</span><br><span class="line"></span><br><span class="line">yum list 验证（查看是否有包）</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p><strong>基本思路：</strong><br>使用select语句导出要迁移的数据到文件。<br>然后再使用load data语句把文件中的数据导入到数据库中。</p>
+</blockquote>
+<h3 id="创建目录并授权"><a href="#创建目录并授权" class="headerlink" title="创建目录并授权"></a>创建目录并授权</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /data/qianyi</span><br><span class="line">chown -R mysql:mysql /data/</span><br><span class="line">主和属组务必要添加mysql，否则select 语句写不进去数据</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="导出数据"><a href="#导出数据" class="headerlink" title="导出数据"></a>导出数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">进入数据库a</span><br><span class="line">将wzs表数据导出到wzs.txt文件</span><br><span class="line">MariaDB [db]&gt;select * from wzs into outfile &quot;/data/wzs.txt&quot;;</span><br></pre></td></tr></table></figure>
+<h3 id="导入数据"><a href="#导入数据" class="headerlink" title="导入数据"></a>导入数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">进入数据库b</span><br><span class="line">wu的表结构要与wzs表结构一样，否则出错</span><br><span class="line">load data infile &quot;/data/wzs.txt&quot; into table wu;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -334,13 +332,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/12/30/用iso镜像配置本地yum源/">用iso镜像配置本地yum源</a></p>
+        <p><span>本文标题:</span><a href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/">数据的导出/导入</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
-        <p><span>发布时间:</span>2017-12-30, 16:03:14</p>
-        <p><span>最后更新:</span>2017-12-30, 16:05:57</p>
+        <p><span>发布时间:</span>2018-10-07, 16:54:01</p>
+        <p><span>最后更新:</span>2018-10-07, 16:58:15</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/12/30/用iso镜像配置本地yum源/" title="用iso镜像配置本地yum源">http://blog.520jd.me/2017/12/30/用iso镜像配置本地yum源/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2017/12/30/用iso镜像配置本地yum源/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/" title="数据的导出/导入">http://blog.520jd.me/2018/10/07/数据库/Mysql/mysql数据的导出-导入/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/07/数据库/Mysql/mysql数据的导出-导入/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -353,15 +351,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/12/30/Centos7-DNS服务/">
-                    Centos7  DNS服务
+                <a href="/2018/10/07/数据库/Mysql/mysql版本升级/">
+                    数据库版本升级
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/12/30/Docker常用操作命令/">
-                    Docker常用操作命令
+                <a href="/2018/10/06/Shell/Shell入门/">
+                    Shell入门
                 </a>
             </div>
         
@@ -373,7 +371,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#用iso镜像配置本地yum源"><span class="toc-number">1.</span> <span class="toc-text">用iso镜像配置本地yum源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在虚拟机安装iso"><span class="toc-number">1.1.</span> <span class="toc-text">在虚拟机安装iso</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#镜像挂载"><span class="toc-number">1.2.</span> <span class="toc-text">镜像挂载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建yum源"><span class="toc-number">1.3.</span> <span class="toc-text">创建yum源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证"><span class="toc-number">1.4.</span> <span class="toc-text">验证</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建目录并授权"><span class="toc-number">1.</span> <span class="toc-text">创建目录并授权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导出数据"><span class="toc-number">2.</span> <span class="toc-text">导出数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导入数据"><span class="toc-number">3.</span> <span class="toc-text">导入数据</span></a></li></ol>
         
     </div>
     <style>
@@ -409,7 +407,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"用iso镜像配置本地yum源　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"数据的导出/导入　| 个人博客|吴志盛　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -431,7 +429,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/12/30/Centos7-DNS服务/" title="上一篇: Centos7  DNS服务">
+            <a href="/2018/10/07/数据库/Mysql/mysql版本升级/" title="上一篇: 数据库版本升级">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -439,13 +437,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/12/30/Docker常用操作命令/" title="下一篇: Docker常用操作命令">
+            <a href="/2018/10/06/Shell/Shell入门/" title="下一篇: Shell入门">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/07/数据库版本升级/">数据库版本升级</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/07/数据的导出-导入/">数据的导出/导入</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/Shell入门/">Shell入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/zabbix-添加主机/">zabbix-添加主机</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/zabbix修改-忘记密码/">zabbix修改/忘记密码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/zabbix搭建/">zabbix搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/Mysql备份，还原/">Mysql备份，还原</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/手把手搭建Guacamole教程/">手把手搭建Guacamole教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/pssh批量处理/">pssh批量处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/01/松松入门MySQL/">松松入门MySQL</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/01/各种姿势安装MongoDB/">各种姿势安装MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/分分钟进阶MongoDB/">分分钟进阶MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/18/手把手教你安装Arhlinux/">手把手教你安装Archlinux</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/19/zabbix3-0安装/">zabbix3.0安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/02/LVS-nat群集/">LVS+nat群集</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/python一行命令搭建ftp/">python一行命令搭建ftp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/windows安装python/">windows安装python</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/DHCP服务/">DHCP服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/DNS主从服务/">DNS主从服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/Centos7-DNS服务/">Centos7  DNS服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/用iso镜像配置本地yum源/">用iso镜像配置本地yum源</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/Docker常用操作命令/">Docker常用操作命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/29/Shell/">Shell</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/28/windows平台安装MongoDB/">windows平台安装MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/24/Centos上MongDB安装，卸载/">Centos上MongDB安装，卸载</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/07/数据库/Mysql/mysql版本升级/">数据库版本升级</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/">数据的导出/导入</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/Shell/Shell入门/">Shell入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/监控/zabbix-添加主机/">zabbix-添加主机</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/监控/zabbix修改-忘记密码/">zabbix修改/忘记密码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/监控/zabbix搭建/">zabbix搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/数据库/Mysql/Mysql备份，还原/">Mysql备份，还原</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/运维/手把手搭建Guacamole教程/">手把手搭建Guacamole教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/Shell/pssh批量处理/">pssh批量处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/01/数据库/Mysql/松松入门MySQL/">松松入门MySQL</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/01/数据库/MongoDB/各种姿势安装MongoDB/">各种姿势安装MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/数据库/MongoDB/分分钟进阶MongoDB/">分分钟进阶MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/18/运维/手把手教你安装Arhlinux/">手把手教你安装Archlinux</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/19/监控/zabbix3-0安装/">zabbix3.0安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/02/运维/LVS-nat群集/">LVS+nat群集</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/Python/python一行命令搭建ftp/">python一行命令搭建ftp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/Python/windows安装python/">windows安装python</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/运维/DHCP服务/">DHCP服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/运维/DNS主从服务/">DNS主从服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/运维/Centos7-DNS服务/">Centos7  DNS服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/运维/用iso镜像配置本地yum源/">用iso镜像配置本地yum源</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/Docker/Docker常用操作命令/">Docker常用操作命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/29/Shell/Shell/">Shell</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/28/数据库/MongoDB/windows平台安装MongoDB/">windows平台安装MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/24/运维/Centos上MongDB安装，卸载/">Centos上MongDB安装，卸载</a></li></ul>
 
 
 
