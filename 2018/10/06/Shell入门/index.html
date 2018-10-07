@@ -54,7 +54,9 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-49c2d27ef4b6b0c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-4e291be45d074d00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-a40135811c55f873.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-10-07T08:23:06.956Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-1d47497837929a3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8735579-606a44244198d877.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-07T08:23:24.853Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell入门">
 <meta name="twitter:description" content="变量变量 变量引用：\$  和 ${}  命令替换 命令输出中提取信息，并将其赋给变量反引号 和   $() wu=`命令`   或者  wu =$()   注意： 和 $() 与= 不能有空格">
@@ -480,6 +482,8 @@
 <h3 id="抓取所有的数据"><a href="#抓取所有的数据" class="headerlink" title="抓取所有的数据"></a>抓取所有的数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$*  将这些参数视为一个整体</span><br><span class="line">$@   参数当作同一字符串中的多个独立的单词</span><br><span class="line"></span><br><span class="line">#!/bin/bash</span><br><span class="line">count=1 </span><br><span class="line">for param in &quot;$*&quot;</span><br><span class="line">do</span><br><span class="line">  echo &quot;\$* is #$count=$param&quot;</span><br><span class="line">  count=$[ $count + 1 ]</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for param in &quot;$@&quot;</span><br><span class="line">do</span><br><span class="line">  echo &quot;\$@ is #$count=$param&quot;</span><br><span class="line">  count=$[ $count + 1 ]</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/8735579-a40135811c55f873.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">没有任何参数时， \$#的值为0，</span><br><span class="line">$&#123;!#&#125;变量会返回命令行用到的脚本名</span><br><span class="line">带参数时，显示数量相当于 !#</span><br><span class="line"></span><br><span class="line">#!/bin/bash</span><br><span class="line">num=$#</span><br><span class="line">echo The num is $num</span><br><span class="line">echo The &quot;!#&quot; is $&#123;!#&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/8735579-1d47497837929a3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="带参数时，显示数量"><br><img src="https://upload-images.jianshu.io/upload_images/8735579-606a44244198d877.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="没带参数时，显示脚本名"></p>
+
       
     </div>
     
@@ -490,7 +494,7 @@
         <p><span>本文标题:</span><a href="/2018/10/06/Shell入门/">Shell入门</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">吴志盛</a></p>
         <p><span>发布时间:</span>2018-10-06, 18:20:44</p>
-        <p><span>最后更新:</span>2018-10-07, 16:23:06</p>
+        <p><span>最后更新:</span>2018-10-07, 16:23:24</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/10/06/Shell入门/" title="Shell入门">http://blog.520jd.me/2018/10/06/Shell入门/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.520jd.me/2018/10/06/Shell入门/　　作者: 吴志盛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
