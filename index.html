@@ -1,849 +1,601 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html>
 <head>
-
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="吴志盛" />
-
-
-    
-    
-
-
-<meta property="og:type" content="website">
+  <meta charset="utf-8">
+  
+  <title>个人博客|吴志盛</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="MinHow,MinHow's Blog" />
+  
+  <meta property="og:type" content="website">
 <meta property="og:title" content="个人博客|吴志盛">
 <meta property="og:url" content="http://blog.520jd.me/index.html">
 <meta property="og:site_name" content="个人博客|吴志盛">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客|吴志盛">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="个人博客|吴志盛" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/IMG_7259.png">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-    <style> .article { opacity: 0;} </style>
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>个人博客|吴志盛</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
-    }
-</script>
-
-
-    <script>
-        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
-    </script>
-
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
-
-
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56ff76c972fc0cf9"></script>
-
-
-
+  
+  
 
 </head>
+
 <body>
   <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/img/avatar.png" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">吴志盛</a></h1>
-        </hgroup>
-
-        
-        <p class="header-subtitle">知识的广度是深度的副产品</p>
-        
-
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
-
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">MinHow&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
                     
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" href="mailto:80615829@qq.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" href="https://github.com/wuzhisheng" title="GitHub"></a>
-                            
-                                <a class="fa 简书" href="https://www.jianshu.com/users/71ca683d7238/timeline" title="简书"></a>
-                            
-                                <a class="fa CSDN" href="https://my.oschina.net/wuzsheng" title="CSDN"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">-Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">-Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">-shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">-zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/">zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/监控/">监控</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维/">运维</a></li></ul>
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://hkj123.cn/">我大哥</a>
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/kangvcar">GitHub</a>
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
                     
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于前端</div>
-                </section>
-                
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
         </div>
-    </header>                
-</div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">吴志盛</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/img/avatar.png" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">吴志盛</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">知识的广度是深度的副产品</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        MinHow&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 WEB 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
             <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" target="_blank" href="mailto:80615829@qq.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/wuzhisheng" title="GitHub"></a>
-                            
-                                <a class="fa 简书" target="_blank" href="https://www.jianshu.com/users/71ca683d7238/timeline" title="简书"></a>
-                            
-                                <a class="fa CSDN" target="_blank" href="https://my.oschina.net/wuzsheng" title="CSDN"></a>
-                            
-                        </ul>
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//minhow.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/wongminho">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
             </nav>
-        </header>                
+        </div>
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap">
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap">
   
     <article id="post-数据库/Mysql/mysql版本升级" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/07/数据库/Mysql/mysql版本升级/" class="article-date">
-      <time datetime="2018-10-07T08:59:59.000Z" itemprop="datePublished">2018-10-07</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/07/数据库/Mysql/mysql版本升级/">数据库版本升级</a>
+      <a class="article-title" href="/2018/10/07/数据库/Mysql/mysql版本升级/"  >数据库版本升级</a>
     </h1>
   
 
+          
       </header>
-      
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="article-entry " itemprop="articleBody">
       
-          
-              <h3 id="1-查看数据库的当前版本信息："><a href="#1-查看数据库的当前版本信息：" class="headerlink" title="1.查看数据库的当前版本信息："></a>1.查看数据库的当前版本信息：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@wzs6-1 ~]# mysql -V</span><br><span class="line">mysql  Ver 15.1 Distrib 10.0.14-MariaDB, for Linux (x86_64) using readline 5.1</span><br></pre></td></tr></table></figure>
+        <div class="article-img">
+            <a href="/2018/10/07/数据库/Mysql/mysql版本升级/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="数据库版本升级" title="数据库版本升级">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <h3 id="1-查看数据库的当前版本信息："><a href="#1-查看数据库的当前版本信息：" class="headerlink" title="1.查看数据库的当前版本信息："></a>1.查看数据库的当前版本信息：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@wzs6-1 ~]# mysql -V</span><br><span class="line">mysql  Ver 15.1 Distrib 10.0.14-MariaDB, for Linux (x86_64) using readline 5.1</span><br></pre></td></tr></table></figure>
 <p><strong>升级数据库到10.2版本</strong><br>
-          
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-10-07</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/-Mysql/" class="color2">-Mysql</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">-Mysql</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/10/07/数据库/Mysql/mysql版本升级/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/10/07/数据库/Mysql/mysql版本升级/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
-
-
-
-
-
-
-
 
 
   
     <article id="post-数据库/Mysql/mysql数据的导出-导入" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/" class="article-date">
-      <time datetime="2018-10-07T08:54:01.000Z" itemprop="datePublished">2018-10-07</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/">数据的导出/导入</a>
+      <a class="article-title" href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/"  >数据的导出/导入</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
           
-              <blockquote>
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="数据的导出/导入" title="数据的导出/导入">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <blockquote>
 <p><strong>基本思路：</strong><br>使用select语句导出要迁移的数据到文件。<br>然后再使用load data语句把文件中的数据导入到数据库中。</p>
 </blockquote>
 <h3 id="创建目录并授权"><a href="#创建目录并授权" class="headerlink" title="创建目录并授权"></a>创建目录并授权</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /data/qianyi</span><br><span class="line">chown -R mysql:mysql /data/</span><br><span class="line">主和属组务必要添加mysql，否则select 语句写不进去数据</span><br></pre></td></tr></table></figure>
-          
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-10-07</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/-Mysql/" class="color2">-Mysql</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">-Mysql</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/10/07/数据库/Mysql/mysql数据的导出-导入/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
-
-
-
-
-
-
-
 
 
   
     <article id="post-Shell/Shell入门" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/06/Shell/Shell入门/" class="article-date">
-      <time datetime="2018-10-06T10:20:44.000Z" itemprop="datePublished">2018-10-06</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/06/Shell/Shell入门/">Shell入门</a>
+      <a class="article-title" href="/2018/10/06/Shell/Shell入门/"  >Shell入门</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
           
-              <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="变量-1"><a href="#变量-1" class="headerlink" title="变量"></a>变量</h3><blockquote>
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2018/10/06/Shell/Shell入门/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="Shell入门" title="Shell入门">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="变量-1"><a href="#变量-1" class="headerlink" title="变量"></a>变量</h3><blockquote>
 <p>变量引用：\$  和 ${}</p>
 </blockquote>
 <h3 id="命令替换"><a href="#命令替换" class="headerlink" title="命令替换"></a>命令替换</h3><blockquote>
 <p>命令输出中提取信息，并将其赋给变量<br>反引号 和   $()</p>
 <p>wu=`命令`   或者  wu =$()  </p>
 <p>注意：<code></code> 和 $() 与= 不能有空格<br>
-          
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-10-06</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/-shell/" class="color2">-shell</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">-shell</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/10/06/Shell/Shell入门/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/10/06/Shell/Shell入门/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
-
-
-
-
-
-
-
 
 
   
     <article id="post-监控/zabbix-添加主机" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/03/监控/zabbix-添加主机/" class="article-date">
-      <time datetime="2018-10-03T09:05:42.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/监控/zabbix-添加主机/">zabbix-添加主机</a>
+      <a class="article-title" href="/2018/10/03/监控/zabbix-添加主机/"  >zabbix-添加主机</a>
     </h1>
   
 
+          
       </header>
-      
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="article-entry " itemprop="articleBody">
       
-          
-              <h2 id="client安装"><a href="#client安装" class="headerlink" title="client安装"></a>client安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">wget http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/zabbix-release-3.2-1.el7.noarch.rpm</span><br><span class="line">rpm -ivh  zabbix-release-3.2-1.el7.noarch.rpm</span><br><span class="line">yum install -y zabbix-agent</span><br><span class="line">vim /etc/zabbix/zabbix_agented.conf</span><br><span class="line">Server=服务端IP(被动模式)</span><br><span class="line">ServerActive=服务端IP（主动模式）</span><br><span class="line">Hostname=wzs1 #客户端名字在服务端设置的主机名（与web界面一样）</span><br><span class="line">systemctl start zabbix-agent</span><br><span class="line">systemctl enable zabbix-agent</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">ps aux|grep zabbix</span><br><span class="line">netstat -lntp</span><br><span class="line">zabbix-server和zabbix-client，都要关闭firewalld和selinux</span><br></pre></td></tr></table></figure>
-          
+        <div class="article-img">
+            <a href="/2018/10/03/监控/zabbix-添加主机/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="zabbix-添加主机" title="zabbix-添加主机">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <h2 id="client安装"><a href="#client安装" class="headerlink" title="client安装"></a>client安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">wget http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/zabbix-release-3.2-1.el7.noarch.rpm</span><br><span class="line">rpm -ivh  zabbix-release-3.2-1.el7.noarch.rpm</span><br><span class="line">yum install -y zabbix-agent</span><br><span class="line">vim /etc/zabbix/zabbix_agented.conf</span><br><span class="line">Server=服务端IP(被动模式)</span><br><span class="line">ServerActive=服务端IP（主动模式）</span><br><span class="line">Hostname=wzs1 #客户端名字在服务端设置的主机名（与web界面一样）</span><br><span class="line">systemctl start zabbix-agent</span><br><span class="line">systemctl enable zabbix-agent</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">ps aux|grep zabbix</span><br><span class="line">netstat -lntp</span><br><span class="line">zabbix-server和zabbix-client，都要关闭firewalld和selinux</span><br></pre></td></tr></table></figure>
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-10-03</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/-zabbix/" class="color3">-zabbix</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zabbix/">-zabbix</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/10/03/监控/zabbix-添加主机/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/10/03/监控/zabbix-添加主机/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
-
-
-
-
-
-
-
 
 
   
     <article id="post-监控/zabbix修改-忘记密码" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/03/监控/zabbix修改-忘记密码/" class="article-date">
-      <time datetime="2018-10-03T09:04:42.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/监控/zabbix修改-忘记密码/">zabbix修改/忘记密码</a>
+      <a class="article-title" href="/2018/10/03/监控/zabbix修改-忘记密码/"  >zabbix修改/忘记密码</a>
     </h1>
   
 
+          
       </header>
-      
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="article-entry " itemprop="articleBody">
       
-          
-              <h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><blockquote>
+        <div class="article-img">
+            <a href="/2018/10/03/监控/zabbix修改-忘记密码/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="zabbix修改/忘记密码" title="zabbix修改/忘记密码">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><blockquote>
 <p>点击  Administration -&gt; Users -&gt; Admin -&gt; Password<br>再修改密码：cnhope<br>修改中文<br>Administration -&gt; Users -&gt; Admin -&gt;Language<br>选：Chinese(zh_CN)<br>
-          
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-10-03</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/监控/" class="color3">监控</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/监控/">监控</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/10/03/监控/zabbix修改-忘记密码/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/10/03/监控/zabbix修改-忘记密码/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
-
-
-
-
-
-
-
 
 
   
     <article id="post-监控/zabbix搭建" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/03/监控/zabbix搭建/" class="article-date">
-      <time datetime="2018-10-03T09:03:21.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/监控/zabbix搭建/">zabbix搭建</a>
+      <a class="article-title" href="/2018/10/03/监控/zabbix搭建/"  >zabbix搭建</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
           
-              <h2 id="初始zabbix"><a href="#初始zabbix" class="headerlink" title="初始zabbix"></a>初始zabbix</h2><blockquote>
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2018/10/03/监控/zabbix搭建/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="zabbix搭建" title="zabbix搭建">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <h2 id="初始zabbix"><a href="#初始zabbix" class="headerlink" title="初始zabbix"></a>初始zabbix</h2><blockquote>
 <p><strong>常见监控软件</strong><br>cacti,nagios,zabbix,smokeping,open-falcon等<br>cacti,nagios,zabbix 服务端监控中心，需要PHP环境支持。<br>zabbix和cacti需要mysql作为数据存储，可以用数据成图<br>nagios不用存储历史数据注重服务或者监控项的状态，成图需要插件<br>zabbix会获取服务或者监控项目的数据，会把数据记录到数据库里，从而可以成图</p>
 </blockquote>
 <blockquote>
 <p>c/s架构，基于c++开发，监控中心支持web界面配置和管理<br>Zabbix-server 监控中心，接收客户端上报信息，负责配置，统计，操作数据，数据存储，存放数据<br>可在web界面，操作配置zabbix<br>zabbix-proxy（可选组件）：代替zabbix-server的功能，减轻server的压力<br>zabbix-agent客户端软件，负责采集各个监控服务或项目的数据，并上报</p>
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/8735579-f7283fd3acf307df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="zabbix流程图"><br>
-          
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-10-03</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/监控/" class="color3">监控</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/监控/">监控</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/10/03/监控/zabbix搭建/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/10/03/监控/zabbix搭建/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
-
-
-
-
-
-
-
 
 
   
     <article id="post-数据库/Mysql/Mysql备份，还原" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/03/数据库/Mysql/Mysql备份，还原/" class="article-date">
-      <time datetime="2018-10-03T09:01:21.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/数据库/Mysql/Mysql备份，还原/">Mysql备份，还原</a>
+      <a class="article-title" href="/2018/10/03/数据库/Mysql/Mysql备份，还原/"  >Mysql备份，还原</a>
     </h1>
   
 
+          
       </header>
-      
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="article-entry " itemprop="articleBody">
       
-          
-              <h3 id="完全备份"><a href="#完全备份" class="headerlink" title="完全备份"></a>完全备份</h3><h4 id="开启二进制"><a href="#开启二进制" class="headerlink" title="开启二进制"></a>开启二进制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/my.cnf.d/server.cnf</span><br><span class="line">[mysqld]</span><br><span class="line">datadir=/var/lib/mysql  \\数据库默认路径</span><br><span class="line">log_bin=mysql-bin  #日志文件名称，末指定则按日期命名</span><br><span class="line">binlog_format=row</span><br><span class="line">service mysql restart</span><br><span class="line">否则没有xtrabackup_binlog_info文件</span><br></pre></td></tr></table></figure>
-          
+        <div class="article-img">
+            <a href="/2018/10/03/数据库/Mysql/Mysql备份，还原/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="Mysql备份，还原" title="Mysql备份，还原">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <h3 id="完全备份"><a href="#完全备份" class="headerlink" title="完全备份"></a>完全备份</h3><h4 id="开启二进制"><a href="#开启二进制" class="headerlink" title="开启二进制"></a>开启二进制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/my.cnf.d/server.cnf</span><br><span class="line">[mysqld]</span><br><span class="line">datadir=/var/lib/mysql  \\数据库默认路径</span><br><span class="line">log_bin=mysql-bin  #日志文件名称，末指定则按日期命名</span><br><span class="line">binlog_format=row</span><br><span class="line">service mysql restart</span><br><span class="line">否则没有xtrabackup_binlog_info文件</span><br></pre></td></tr></table></figure>
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-10-03</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/Mysql/" class="color1">Mysql</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/10/03/数据库/Mysql/Mysql备份，还原/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/10/03/数据库/Mysql/Mysql备份，还原/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
-
-
-
-
-
-
-
 
 
   
     <article id="post-运维/手把手搭建Guacamole教程" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/03/运维/手把手搭建Guacamole教程/" class="article-date">
-      <time datetime="2018-10-03T08:46:34.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/运维/手把手搭建Guacamole教程/">手把手搭建Guacamole教程</a>
+      <a class="article-title" href="/2018/10/03/运维/手把手搭建Guacamole教程/"  >手把手搭建Guacamole教程</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
           
-              <h1 id="初始Guacamole"><a href="#初始Guacamole" class="headerlink" title="初始Guacamole"></a>初始Guacamole</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><blockquote>
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2018/10/03/运维/手把手搭建Guacamole教程/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="手把手搭建Guacamole教程" title="手把手搭建Guacamole教程">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <h1 id="初始Guacamole"><a href="#初始Guacamole" class="headerlink" title="初始Guacamole"></a>初始Guacamole</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><blockquote>
 <p>在浏览器上远程操作虚拟机适用于Chrome，Firefox，IE10等浏览器（浏览器需要支持HTML5）</p>
 </blockquote>
 <h2 id="Guacamole的介绍以及架构"><a href="#Guacamole的介绍以及架构" class="headerlink" title="Guacamole的介绍以及架构"></a>Guacamole的介绍以及架构</h2><blockquote>
 <p>其由许多部件组成的轻量级web应用程序，大部分的功能依靠Guacamole的底层组件&gt;来完成。</p>
 <p>用户通过浏览器连接到Guacamole的服务端。Guacamole的客户端是用JavaScript编写的，Guacamole server通过web容器（比如tomcat）把服务提供给用户。一旦加载，客户端通过http承载着Guacamole自己的定义的协议与服务端通信。</p>
 <p>部署在Guacamole server这边的Web应用程序，解析到的Guacamole protocal，就传给Guacamole的代理guacd（中间层），这个代理（guacd）实际上就是解析Guacamole protocal，替用户连接到远程机器<br>
-          
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-10-03</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/运维/" class="color3">运维</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/运维/">运维</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/10/03/运维/手把手搭建Guacamole教程/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/10/03/运维/手把手搭建Guacamole教程/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
-
-
-
-
-
-
-
 
 
   
     <article id="post-Shell/pssh批量处理" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/09/16/Shell/pssh批量处理/" class="article-date">
-      <time datetime="2018-09-16T08:46:11.000Z" itemprop="datePublished">2018-09-16</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/16/Shell/pssh批量处理/">pssh批量处理</a>
+      <a class="article-title" href="/2018/09/16/Shell/pssh批量处理/"  >pssh批量处理</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
           
-              <h1 id="初识pssh"><a href="#初识pssh" class="headerlink" title="初识pssh"></a>初识pssh</h1><h2 id="使用原因"><a href="#使用原因" class="headerlink" title="使用原因"></a>使用原因</h2><blockquote>
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2018/09/16/Shell/pssh批量处理/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="pssh批量处理" title="pssh批量处理">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <h1 id="初识pssh"><a href="#初识pssh" class="headerlink" title="初识pssh"></a>初识pssh</h1><h2 id="使用原因"><a href="#使用原因" class="headerlink" title="使用原因"></a>使用原因</h2><blockquote>
 <p>对于上百台服务器配置服务，一台一台改工作量极大。首先想到是ansble，saltstack这两个批量管理的，但是想了想，saltstack不会，ansble好像是好像是被管理端还要安装客户端的，又不经常使用（线上的环境），弄好了还要编排剧本，语法都忘记了。有没有更轻量一点的工具呢？以前在书上了解到pssh这个工具好像挺不错的</p>
 </blockquote>
 <p>##pssh作用</p>
@@ -853,70 +605,61 @@
 <p>#pssh配置</p>
 <h2 id="1-生成秘钥对"><a href="#1-生成秘钥对" class="headerlink" title="1.生成秘钥对"></a>1.生成秘钥对</h2><blockquote>
 <p>ssh-keygen -t rsa<br>三次回车<br>本机一台配置即可<br>
-          
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-09-16</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/shell/" class="color1">shell</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/09/16/Shell/pssh批量处理/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/09/16/Shell/pssh批量处理/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
-
-
-
-
-
-
-
 
 
   
     <article id="post-数据库/Mysql/松松入门MySQL" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/05/01/数据库/Mysql/松松入门MySQL/" class="article-date">
-      <time datetime="2018-05-01T11:53:02.000Z" itemprop="datePublished">2018-05-01</time>
-</a>
-
-
-    </div>
-  
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/01/数据库/Mysql/松松入门MySQL/">松松入门MySQL</a>
+      <a class="article-title" href="/2018/05/01/数据库/Mysql/松松入门MySQL/"  >松松入门MySQL</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
           
-              <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="centos6安装"><a href="#centos6安装" class="headerlink" title="centos6安装"></a>centos6安装</h3><blockquote>
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2018/05/01/数据库/Mysql/松松入门MySQL/" >
+                
+                <img src="http://blog.520jd.me/images/banner.jpg" alt="松松入门MySQL" title="松松入门MySQL">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="centos6安装"><a href="#centos6安装" class="headerlink" title="centos6安装"></a>centos6安装</h3><blockquote>
 <p><strong>注意大小写</strong><br>yum -y install MariaDB-Galera-server MariaDB-client galera  </p>
 </blockquote>
 <blockquote>
@@ -928,152 +671,174 @@
 <blockquote>
 <p><strong>进入mysql</strong><br>mysql –uroot –p密码;</p>
 </blockquote>
-          
+            </p>
+        </div>
       
+        
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-05-01</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
       
+    <a href="/tags/MySQL/" class="color1">MySQL</a>
       
+  </li>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/05/01/数据库/Mysql/松松入门MySQL/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </ul>
+        
+            <a href="/2018/05/01/数据库/Mysql/松松入门MySQL/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
   </div>
-  
 </article>
 
 
-
-
-
-
-
-
-
   
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
-</div>
+
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next >></a>
+  </nav>
+</section>
+        
+      </div>
       <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2017-2018 吴志盛
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
-            </div>
-        </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 吴志盛<br>
+      </p>
     </div>
+  </div>
 </footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
-
-
-
-
-
-    <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
-</div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-             archives: ".archive-article-title", 
-             miniArchives: "a.post-list-link", 
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
+  var mihoConfig = {
+      root: "http://blog.520jd.me",
+      animate: true,
+      isHome: true,
+      share: true,
+      reward: 1
+  }
 </script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 10px;">-Linux</a> <a href="/tags/Mysql/" style="font-size: 15px;">-Mysql</a> <a href="/tags/shell/" style="font-size: 10px;">-shell</a> <a href="/tags/zabbix/" style="font-size: 10px;">-zabbix</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/MongoDB/" style="font-size: 15px;">MongoDB</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/mongodb/" style="font-size: 15px;">mongodb</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shell/" style="font-size: 15px;">shell</a> <a href="/tags/zabbix/" style="font-size: 10px;">zabbix</a> <a href="/tags/监控/" style="font-size: 15px;">监控</a> <a href="/tags/运维/" style="font-size: 10px;">运维</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 10px;">-Linux</a> <a href="/tags/Mysql/" style="font-size: 15px;">-Mysql</a> <a href="/tags/shell/" style="font-size: 10px;">-shell</a> <a href="/tags/zabbix/" style="font-size: 10px;">-zabbix</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/MongoDB/" style="font-size: 15px;">MongoDB</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/mongodb/" style="font-size: 15px;">mongodb</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shell/" style="font-size: 15px;">shell</a> <a href="/tags/zabbix/" style="font-size: 10px;">zabbix</a> <a href="/tags/监控/" style="font-size: 15px;">监控</a> <a href="/tags/运维/" style="font-size: 10px;">运维</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
   </div>
 </body>
 </html>
